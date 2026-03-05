@@ -1,9 +1,9 @@
-import { HeroSection } from "../widgets/sections/HeroSection";
+import { HomePage } from "../pages/HomePage";
 
 function App() {
   return (
     <main>
-      <HeroSection />
+      <HomePage />
     </main>
   );
 }
