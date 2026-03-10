@@ -37,4 +37,197 @@
   .section-title {
     @apply mt-3 text-3xl leading-tight md:text-5xl;
   }
+
+  .site-background {
+    @apply bg-heroGlow;
+  }
+
+  .about-reveal {
+    animation: aboutReveal 780ms cubic-bezier(0.22, 0.65, 0.22, 1) both;
+  }
+
+  .about-band {
+    animation: aboutBandFlow 38s linear infinite;
+  }
+
+  .about-ambient {
+    animation: aboutAmbient 16s ease-in-out infinite alternate;
+  }
+
+  .about-ambient-delayed {
+    animation: aboutAmbient 18s ease-in-out infinite alternate-reverse;
+  }
+
+  .summary-spotlight {
+    isolation: isolate;
+    overflow: hidden;
+    animation: summaryCardDrift 8s ease-in-out infinite alternate;
+    --runner-len: 52;
+    --runner-gap: 308;
+    --runner-speed: 1s;
+    box-shadow:
+      0 0 0 1px rgba(16, 185, 129, 0.24),
+      0 0 18px rgba(16, 185, 129, 0.14),
+      0 0 36px rgba(16, 185, 129, 0.1);
+  }
+
+  .summary-spotlight::before {
+    content: "";
+    position: absolute;
+    inset: -1px;
+    border-radius: inherit;
+    pointer-events: none;
+    inset: 0;
+    padding: 1.2px;
+    background: linear-gradient(
+      130deg,
+      rgba(16, 185, 129, 0.26),
+      rgba(134, 239, 172, 0.1),
+      rgba(16, 185, 129, 0.2)
+    );
+    -webkit-mask:
+      linear-gradient(#000 0 0) content-box,
+      linear-gradient(#000 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    filter: drop-shadow(0 0 8px rgba(16, 185, 129, 0.32));
+  }
+
+  .summary-orbit {
+    pointer-events: none;
+    z-index: 2;
+  }
+
+  .summary-orbit-track {
+    fill: none;
+    stroke: rgba(16, 185, 129, 0.26);
+    stroke-width: 2;
+    vector-effect: non-scaling-stroke;
+  }
+
+  .summary-orbit-runner {
+    fill: none;
+    stroke: rgba(16, 185, 129, 0.6);
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-dasharray: var(--runner-len) var(--runner-gap);
+    vector-effect: non-scaling-stroke;
+    filter: drop-shadow(0 0 4px rgba(255, 255, 255, 0.75)) drop-shadow(0 0 9px rgba(16, 185, 129, 0.6));
+    animation: summaryRunnerStroke var(--runner-speed) linear infinite;
+  }
+
+  .summary-badge {
+    animation: summaryBadgeFloat 3.2s ease-in-out infinite alternate;
+    color: rgb(5 150 105 / 0.95);
+    border-color: rgba(16, 185, 129, 0.28);
+    background: rgba(255, 255, 255, 0.74);
+  }
+
+  .summary-item {
+    background-image: linear-gradient(120deg, rgba(255, 255, 255, 0.86), rgba(236, 255, 240, 0.7), rgba(255, 255, 255, 0.86));
+    background-size: 220% 220%;
+    animation: summaryItemGlow 7.6s ease-in-out infinite;
+    transition: transform 260ms ease, box-shadow 260ms ease, border-color 260ms ease;
+  }
+
+  .summary-item:nth-child(2) {
+    animation-delay: 0.9s;
+  }
+
+  .summary-item:nth-child(3) {
+    animation-delay: 1.8s;
+  }
+
+  .summary-item:hover {
+    transform: translateY(-4px);
+    border-color: rgba(16, 185, 129, 0.45);
+    box-shadow: 0 16px 32px -18px rgba(16, 185, 129, 0.38);
+  }
+}
+
+@keyframes aboutReveal {
+  0% {
+    opacity: 0;
+    transform: translateY(24px) scale(0.99);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes aboutBandFlow {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-38%);
+  }
+}
+
+@keyframes aboutAmbient {
+  0% {
+    transform: translate3d(-6%, 0, 0) scale(1);
+    opacity: 0.46;
+  }
+
+  100% {
+    transform: translate3d(6%, -8%, 0) scale(1.15);
+    opacity: 0.72;
+  }
+}
+
+@keyframes summaryCardDrift {
+  0% {
+    transform: translateY(0) scale(1);
+  }
+
+  100% {
+    transform: translateY(-4px) scale(1.006);
+  }
+}
+
+@keyframes summaryRunnerStroke {
+  0% {
+    stroke-dashoffset: 0;
+  }
+
+  100% {
+    stroke-dashoffset: -360;
+  }
+}
+
+@keyframes summaryBadgeFloat {
+  0% {
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: translateY(-2px);
+  }
+}
+
+@keyframes summaryItemGlow {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@supports (animation-timeline: view()) {
+  .about-reveal {
+    animation: aboutReveal linear both;
+    animation-timeline: view();
+    animation-range: entry 10% cover 34%;
+  }
 }

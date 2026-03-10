@@ -8,7 +8,7 @@ import { ProjectsSection } from "../widgets/sections/ProjectsSection";
 
 export function HomePage() {
   return (
-    <div className="relative bg-heroGlow">
+    <div className="site-background">
       <Navbar />
       <HeroSection />
       <AboutSection />

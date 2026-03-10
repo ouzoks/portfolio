@@ -1,4 +1,4 @@
-import type { NavItem, Project, StatItem } from "../types";
+import type { AboutCapability, AboutCapabilitySummary, NavItem, Project, StatItem } from "../types";
 
 export const navItems: NavItem[] = [
   { label: "Hakkimda", href: "#about" },
@@ -32,3 +32,55 @@ export const projects: Project[] = [
     stack: "React, TS, REST API",
   },
 ];
+
+export const aboutCapabilities: AboutCapability[] = [
+  {
+    title: "Frontend Development",
+    description:
+      "Modern ve olceklenebilir kullanici arayuzleri gelistiriyorum. Odagim, kullanicinin akista kaybolmadan hizli ve temiz bir deneyim yasamasi.",
+    tags: [
+      "React",
+      "TypeScript",
+      "JavaScript (ES6+)",
+      "TailwindCSS",
+      "Material UI",
+      "Component Architecture",
+      "Responsive UI",
+      "Clean Code",
+    ],
+  },
+  {
+    title: "API & Backend Integration",
+    description:
+      "Frontend ile backend sistemleri arasinda guvenilir veri akisi kuruyorum. Hata durumlarini ve kimlik dogrulamayi urun deneyiminin parcasi olarak ele aliyorum.",
+    tags: [
+      "REST API Integration",
+      "JWT Authentication",
+      ".NET API",
+      "Swagger",
+      "Data Fetching",
+      "Frontend-Backend Communication",
+    ],
+  },
+  {
+    title: "Architecture & Product Thinking",
+    description:
+      "Urunlerin surdurulebilir ve olceklenebilir olmasi icin mimari odakli calisiyorum. Kisa vadeli hiz ile uzun vadeli bakim maliyeti arasinda dogru dengeyi kuruyorum.",
+    tags: [
+      "Reusable Components",
+      "Design Systems",
+      "i18n (Multilingual Apps)",
+      "Scalable Frontend Structure",
+      "User Flow Thinking",
+    ],
+  },
+];
+
+export const aboutCapabilitySummary: AboutCapabilitySummary = {
+  whatICareAbout:
+    "Kullanici deneyimini bozmayan teknik kararlar, surdurulebilir kod yapisi ve sistemler arasi guvenilir iletisim.",
+  typicalTools:
+    "React, TypeScript, TailwindCSS, Material UI, REST API, JWT, Swagger, design tokens ve performans odakli tooling.",
+  practicalImpact:
+    "Daha hizli teslimat, daha az teknik borc, daha stabil release sureci ve buyurken dagilmayan urun mimarisi.",
+};

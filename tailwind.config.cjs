@@ -5,9 +5,9 @@ module.exports = {
     extend: {
       colors: {
         sand: {
-          50: "#f3fff4",
-          100: "#e6fbe7",
-          200: "#d2f5d5",
+          50: "#f7fff7",
+          100: "#ecfff0",
+          200: "#d9ffe2",
         },
         ink: {
           700: "#222222",
@@ -15,8 +15,8 @@ module.exports = {
           900: "#000000",
         },
         tealBrand: {
-          500: "#2f9e44",
-          600: "#1f7a34",
+          500: "#22c55e",
+          600: "#16a34a",
         },
       },
       fontFamily: {
@@ -24,11 +24,11 @@ module.exports = {
         serif: ["Fraunces", "Georgia", "serif"],
       },
       boxShadow: {
-        soft: "0 20px 45px -20px rgba(31, 122, 52, 0.35)",
+        soft: "0 20px 45px -20px rgba(22, 163, 74, 0.4)",
       },
       backgroundImage: {
         heroGlow:
-          "radial-gradient(circle at 8% 10%, rgba(47, 158, 68, 0.18), transparent 22%), radial-gradient(circle at 88% 0%, rgba(31, 122, 52, 0.12), transparent 24%), linear-gradient(180deg, #f3fff4 0%, #ffffff 100%)",
+          "radial-gradient(circle at 8% 10%, rgba(34, 197, 94, 0.35), transparent 24%), radial-gradient(circle at 88% 0%, rgba(22, 163, 74, 0.26), transparent 30%), linear-gradient(180deg, #ecfff0 0%, #ffffff 100%)",
       },
       animation: {
         marquee: "marquee 20s linear infinite",

@@ -13,3 +13,15 @@ export type Project = {
   description: string;
   stack: string;
 };
+
+export type AboutCapability = {
+  title: string;
+  description: string;
+  tags: string[];
+};
+
+export type AboutCapabilitySummary = {
+  whatICareAbout: string;
+  typicalTools: string;
+  practicalImpact: string;
+};
