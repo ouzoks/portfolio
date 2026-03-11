@@ -55,12 +55,25 @@ export function HeroSection() {
               : "-translate-x-1/2 md:-translate-x-[20%] scale-95 opacity-0"
           }`}
         >
-          <p className="text-sm leading-7 text-black md:text-base">
-            Frontend agırlıklı calısan, React ve .NET ekosistemine hakim bir yazılım muhendisiyim.
-            React.js ve Material UI kullanarak modern, olceklenebilir ve clean-code prensiplerine
-            uygun arayuzler gelistirdim. REST API entegrasyonları, JWT tabanlı kimlik dogrulama ve
-            frontend-backend baglantıları konusunda deneyim sahibiyim.
-          </p>
+         <p className="leading-relaxed text-lg text-ink-700">
+  Merhaba, web siteme hoş geldiniz.
+  <br /><br />
+  Kısaca yaptığım işi anlatacak olursam,
+  <span className="font-semibold text-ink-900"> karmaşık fikirleri </span>
+  daha 
+  <span className="font-semibold text-tealBrand-600"> sade ve anlaşılır çıktılara </span>
+  dönüştürür, 
+  <span className="font-semibold text-ink-900"> kullanıcı senaryolarını </span>
+  uygulanabilir hale getiririm.
+  <br /><br />
+  Amacım, kullanıcıların
+  <span className="font-semibold text-tealBrand-600"> akışta kaybolmadan </span>
+  ilerleyebileceği, 
+  <span className="font-semibold text-ink-900"> iyi düşünülmüş </span>
+  ve 
+  <span className="font-semibold text-tealBrand-600"> sürdürülebilir </span>
+  arayüzler ve fonksiyonlar oluşturmaktır.
+</p>
         </article>
       </div>
 

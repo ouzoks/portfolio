@@ -1,16 +1,10 @@
-import type { AboutCapability, AboutCapabilitySummary, NavItem, Project, StatItem } from "../types";
+import type { AboutCapability, NavItem, Project } from "../types";
 
 export const navItems: NavItem[] = [
   { label: "Hakkimda", href: "#about" },
   { label: "Projeler", href: "#projects" },
   { label: "Galeri", href: "#gallery" },
   { label: "Iletisim", href: "#contact" },
-];
-
-export const heroStats: StatItem[] = [
-  { value: "4+", label: "Yil Deneyim" },
-  { value: "18", label: "Tamamlanan Proje" },
-  { value: "95%", label: "Musteri Memnuniyeti" },
 ];
 
 export const projects: Project[] = [
@@ -35,52 +29,60 @@ export const projects: Project[] = [
 
 export const aboutCapabilities: AboutCapability[] = [
   {
+    number: "01",
     title: "Frontend Development",
     description:
-      "Modern ve olceklenebilir kullanici arayuzleri gelistiriyorum. Odagim, kullanicinin akista kaybolmadan hizli ve temiz bir deneyim yasamasi.",
+      "Kullanicilarin rahatca ilerleyebilecegi **modern** ve **olceklenebilir** arayuzler gelistiriyorum. Odagim, deneyimin **sade**, **hizli** ve **anlasilir** olmasi.",
     tags: [
-      "React",
-      "TypeScript",
-      "JavaScript (ES6+)",
-      "TailwindCSS",
-      "Material UI",
-      "Component Architecture",
-      "Responsive UI",
-      "Clean Code",
+      { icon: "react", label: "React" },
+      { icon: "typescript", label: "TypeScript" },
+      { icon: "javascript", label: "JavaScript (ES6+)" },
+      { icon: "tailwind", label: "TailwindCSS" },
+      { icon: "materialui", label: "Material UI" },
+      { icon: "component_architecture", label: "Component Architecture" },
+      { icon: "responsive_ui", label: "Responsive UI" },
+      { icon: "clean_code", label: "Clean Code" },
     ],
   },
   {
+    number: "02",
+    title: "User Experience & Interface Design",
+    description:
+      "Arayuzlerde sadece gorsel duzeni degil, kullanicinin akista nasil hissettigini de dusunuyorum. Hedefim, **net**, **erisilebilir** ve **yonlendirici** ekranlar tasarlamak.",
+    tags: [
+      { icon: "ux_ui", label: "UX/UI Thinking" },
+      { icon: "wireframe", label: "Wireframing" },
+      { icon: "responsive_ui", label: "Responsive UI" },
+      { icon: "interaction", label: "Interaction States" },
+      { icon: "accessibility", label: "Accessibility" },
+      { icon: "design_tokens", label: "Design Consistency" },
+    ],
+  },
+  {
+    number: "03",
     title: "API & Backend Integration",
     description:
-      "Frontend ile backend sistemleri arasinda guvenilir veri akisi kuruyorum. Hata durumlarini ve kimlik dogrulamayi urun deneyiminin parcasi olarak ele aliyorum.",
+      "Arayuz ile arka plandaki servislerin sorunsuz iletisim kurmasini sagliyorum. Veri akisinin **guvenilir** olmasi, hata durumlarinin **dogru yonetilmesi** ve kimlik dogrulama surecleri bu alanin **kritik parcalari**.",
     tags: [
-      "REST API Integration",
-      "JWT Authentication",
-      ".NET API",
-      "Swagger",
-      "Data Fetching",
-      "Frontend-Backend Communication",
+      { icon: "rest_api", label: "REST API Integration" },
+      { icon: "jwt", label: "JWT Authentication" },
+      { icon: "dotnet", label: ".NET API" },
+      { icon: "swagger", label: "Swagger" },
+      { icon: "data_fetching", label: "Data Fetching" },
+      { icon: "frontend_backend", label: "Frontend-Backend Communication" },
     ],
   },
   {
+    number: "04",
     title: "Architecture & Product Thinking",
     description:
-      "Urunlerin surdurulebilir ve olceklenebilir olmasi icin mimari odakli calisiyorum. Kisa vadeli hiz ile uzun vadeli bakim maliyeti arasinda dogru dengeyi kuruyorum.",
+      "Urunlerin buyudukce dagilmayan, **surdurulebilir** bir yapiya sahip olmasi icin mimari odakli calisiyorum. **Hizli gelistirme** ile uzun vadede **bakim kolayligi** arasinda dogru dengeyi kurmaya calisiyorum.",
     tags: [
-      "Reusable Components",
-      "Design Systems",
-      "i18n (Multilingual Apps)",
-      "Scalable Frontend Structure",
-      "User Flow Thinking",
+      { icon: "reusable_components", label: "Reusable Components" },
+      { icon: "design_systems", label: "Design Systems" },
+      { icon: "i18n", label: "i18n (Multilingual Apps)" },
+      { icon: "scalable_structure", label: "Scalable Frontend Structure" },
+      { icon: "user_flow", label: "User Flow Thinking" },
     ],
   },
 ];
-
-export const aboutCapabilitySummary: AboutCapabilitySummary = {
-  whatICareAbout:
-    "Kullanici deneyimini bozmayan teknik kararlar, surdurulebilir kod yapisi ve sistemler arasi guvenilir iletisim.",
-  typicalTools:
-    "React, TypeScript, TailwindCSS, Material UI, REST API, JWT, Swagger, design tokens ve performans odakli tooling.",
-  practicalImpact:
-    "Daha hizli teslimat, daha az teknik borc, daha stabil release sureci ve buyurken dagilmayan urun mimarisi.",
-};
