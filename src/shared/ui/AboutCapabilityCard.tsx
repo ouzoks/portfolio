@@ -51,7 +51,7 @@ export function AboutCapabilityCard({ capability, className, delayMs = 0 }: Abou
             {renderHighlightedText(capability.description)}
           </p>
 
-          <div className="mt-8 h-[3px] w-12 rounded-full bg-tealBrand-500/85 transition-[width] duration-500 ease-out group-hover:w-24" />
+          <div className="mt-8 h-[3px] w-12  mx-auto rounded-full bg-tealBrand-500/85 transition-[width] duration-500 ease-out group-hover:w-24" />
         </div>
       </div>
     </article>

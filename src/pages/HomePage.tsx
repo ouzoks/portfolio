@@ -5,6 +5,7 @@ import { ContactSection } from "../widgets/sections/ContactSection";
 import { GallerySection } from "../widgets/sections/GallerySection";
 import { HeroSection } from "../widgets/sections/HeroSection";
 import { ProjectsSection } from "../widgets/sections/ProjectsSection";
+import { SkillSection } from "../widgets/sections/SkillSection";
 
 export function HomePage() {
   return (
@@ -12,6 +13,7 @@ export function HomePage() {
       <Navbar />
       <HeroSection />
       <AboutSection />
+      <SkillSection />
       <ProjectsSection />
       <GallerySection />
       <ContactSection />

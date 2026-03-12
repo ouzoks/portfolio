@@ -47,5 +47,9 @@ export type AboutCapability = {
   number: string;
   title: string;
   description: string;
+};
+
+export type SkillCategory = {
+  title: string;
   tags: AboutCapabilityTag[];
 };

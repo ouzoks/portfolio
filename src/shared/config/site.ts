@@ -1,4 +1,4 @@
-import type { AboutCapability, NavItem, Project } from "../types";
+import type { AboutCapability, NavItem, Project, SkillCategory } from "../types";
 
 export const navItems: NavItem[] = [
   { label: "Hakkimda", href: "#about" },
@@ -33,6 +33,30 @@ export const aboutCapabilities: AboutCapability[] = [
     title: "Frontend Development",
     description:
       "Kullanicilarin rahatca ilerleyebilecegi **modern** ve **olceklenebilir** arayuzler gelistiriyorum. Odagim, deneyimin **sade**, **hizli** ve **anlasilir** olmasi.",
+  },
+  {
+    number: "02",
+    title: "User Experience & Interface Design",
+    description:
+      "Arayuzlerde sadece gorsel duzeni degil, kullanicinin akista nasil hissettigini de dusunuyorum. Hedefim, **net**, **erisilebilir** ve **yonlendirici** ekranlar tasarlamak.",
+  },
+  {
+    number: "03",
+    title: "API & Backend Integration",
+    description:
+      "Arayuz ile arka plandaki servislerin sorunsuz iletisim kurmasini sagliyorum. Veri akisinin **guvenilir** olmasi, hata durumlarinin **dogru yonetilmesi** ve kimlik dogrulama surecleri bu alanin **kritik parcalari**.",
+  },
+  {
+    number: "04",
+    title: "Architecture & Product Thinking",
+    description:
+      "Urunlerin buyudukce dagilmayan, **surdurulebilir** bir yapiya sahip olmasi icin mimari odakli calisiyorum. **Hizli gelistirme** ile uzun vadede **bakim kolayligi** arasinda dogru dengeyi kurmaya calisiyorum.",
+  },
+];
+
+export const skillCategories: SkillCategory[] = [
+  {
+    title: "Frontend Development",
     tags: [
       { icon: "react", label: "React" },
       { icon: "typescript", label: "TypeScript" },
@@ -45,10 +69,7 @@ export const aboutCapabilities: AboutCapability[] = [
     ],
   },
   {
-    number: "02",
     title: "User Experience & Interface Design",
-    description:
-      "Arayuzlerde sadece gorsel duzeni degil, kullanicinin akista nasil hissettigini de dusunuyorum. Hedefim, **net**, **erisilebilir** ve **yonlendirici** ekranlar tasarlamak.",
     tags: [
       { icon: "ux_ui", label: "UX/UI Thinking" },
       { icon: "wireframe", label: "Wireframing" },
@@ -59,10 +80,7 @@ export const aboutCapabilities: AboutCapability[] = [
     ],
   },
   {
-    number: "03",
     title: "API & Backend Integration",
-    description:
-      "Arayuz ile arka plandaki servislerin sorunsuz iletisim kurmasini sagliyorum. Veri akisinin **guvenilir** olmasi, hata durumlarinin **dogru yonetilmesi** ve kimlik dogrulama surecleri bu alanin **kritik parcalari**.",
     tags: [
       { icon: "rest_api", label: "REST API Integration" },
       { icon: "jwt", label: "JWT Authentication" },
@@ -73,10 +91,7 @@ export const aboutCapabilities: AboutCapability[] = [
     ],
   },
   {
-    number: "04",
     title: "Architecture & Product Thinking",
-    description:
-      "Urunlerin buyudukce dagilmayan, **surdurulebilir** bir yapiya sahip olmasi icin mimari odakli calisiyorum. **Hizli gelistirme** ile uzun vadede **bakim kolayligi** arasinda dogru dengeyi kurmaya calisiyorum.",
     tags: [
       { icon: "reusable_components", label: "Reusable Components" },
       { icon: "design_systems", label: "Design Systems" },
