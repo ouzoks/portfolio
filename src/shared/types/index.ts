@@ -16,11 +16,20 @@ export type Project = {
 
 export type AboutCapabilityTag = {
   icon:
+    | "html"
+    | "css"
     | "react"
     | "typescript"
     | "javascript"
     | "tailwind"
     | "materialui"
+    | "csharp"
+    | "dotnet_core"
+    | "plsql"
+    | "mssql"
+    | "github"
+    | "jira"
+    | "ai_tools"
     | "component_architecture"
     | "responsive_ui"
     | "clean_code"

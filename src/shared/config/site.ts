@@ -56,48 +56,32 @@ export const aboutCapabilities: AboutCapability[] = [
 
 export const skillCategories: SkillCategory[] = [
   {
-    title: "Frontend Development",
+    title: "Frontend",
     tags: [
+      { icon: "html", label: "HTML" },
+      { icon: "css", label: "CSS" },
+      { icon: "javascript", label: "JavaScript" },
       { icon: "react", label: "React" },
       { icon: "typescript", label: "TypeScript" },
-      { icon: "javascript", label: "JavaScript (ES6+)" },
-      { icon: "tailwind", label: "TailwindCSS" },
+      { icon: "tailwind", label: "Tailwind CSS" },
       { icon: "materialui", label: "Material UI" },
-      { icon: "component_architecture", label: "Component Architecture" },
-      { icon: "responsive_ui", label: "Responsive UI" },
-      { icon: "clean_code", label: "Clean Code" },
     ],
   },
   {
-    title: "User Experience & Interface Design",
+    title: "Backend",
     tags: [
-      { icon: "ux_ui", label: "UX/UI Thinking" },
-      { icon: "wireframe", label: "Wireframing" },
-      { icon: "responsive_ui", label: "Responsive UI" },
-      { icon: "interaction", label: "Interaction States" },
-      { icon: "accessibility", label: "Accessibility" },
-      { icon: "design_tokens", label: "Design Consistency" },
+      { icon: "csharp", label: "C#" },
+      { icon: "dotnet_core", label: ".NET Core" },
+      { icon: "plsql", label: "PL/SQL" },
+      { icon: "mssql", label: "MSSQL" },
     ],
   },
   {
-    title: "API & Backend Integration",
+    title: "Tools",
     tags: [
-      { icon: "rest_api", label: "REST API Integration" },
-      { icon: "jwt", label: "JWT Authentication" },
-      { icon: "dotnet", label: ".NET API" },
-      { icon: "swagger", label: "Swagger" },
-      { icon: "data_fetching", label: "Data Fetching" },
-      { icon: "frontend_backend", label: "Frontend-Backend Communication" },
-    ],
-  },
-  {
-    title: "Architecture & Product Thinking",
-    tags: [
-      { icon: "reusable_components", label: "Reusable Components" },
-      { icon: "design_systems", label: "Design Systems" },
-      { icon: "i18n", label: "i18n (Multilingual Apps)" },
-      { icon: "scalable_structure", label: "Scalable Frontend Structure" },
-      { icon: "user_flow", label: "User Flow Thinking" },
+      { icon: "github", label: "GitHub" },
+      { icon: "jira", label: "Jira (Temel)" },
+      { icon: "ai_tools", label: "AI Tools" },
     ],
   },
 ];

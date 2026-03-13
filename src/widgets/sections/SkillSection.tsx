@@ -3,17 +3,24 @@ import { SkillCategoryGroup } from "../../shared/ui/SkillCategoryGroup";
 
 export function SkillSection() {
   return (
-    <section className="shell py-8 md:py-12" aria-labelledby="skills-heading">
-<p className="section-eyebrow">Skills & Technologies</p>
+    <section className="shell py-12 md:py-16" aria-labelledby="skills-heading">
+      <header className="max-w-3xl">
+        <p className="section-eyebrow">Skills & Technologies</p>
+        <h2
+          id="skills-heading"
+          className="mt-4 font-serif text-4xl leading-[1.05] tracking-tight text-ink-900 md:text-5xl"
+        >
+          Teknolojiler ve kullandigim araclar
+        </h2>
+      </header>
 
-      <div className="mt-12 rounded-[2rem] border border-tealBrand-500/20 bg-[linear-gradient(180deg,rgba(255,255,255,0.96),rgba(244,255,246,0.92))] p-6 shadow-[0_24px_52px_-34px_rgba(17,17,17,0.26)] md:p-8">
-        <div className="grid gap-8 lg:grid-cols-2 lg:gap-x-10 lg:gap-y-10">
+      <div className="mt-12 grid gap-10 lg:grid-cols-[1.1fr_0.9fr_0.8fr] lg:gap-12">
           {skillCategories.map((category) => (
             <div
               key={category.title}
-              className="border-b border-tealBrand-500/18 pb-8 last:border-b-0 last:pb-0"
+              className="border-t border-tealBrand-500/18 pt-5"
             >
-              <h3 className="text-xl leading-tight text-ink-900 md:text-2xl">
+              <h3 className="text-lg font-semibold uppercase tracking-[0.12em] text-ink-900 md:text-xl">
                 {category.title}
               </h3>
               <div className="mt-5">
@@ -21,7 +28,6 @@ export function SkillSection() {
               </div>
             </div>
           ))}
-        </div>
       </div>
     </section>
   );
