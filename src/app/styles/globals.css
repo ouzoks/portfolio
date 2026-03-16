@@ -58,6 +58,31 @@
     animation: aboutAmbient 18s ease-in-out infinite alternate-reverse;
   }
 
+  .themed-scrollbar {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(22, 163, 74, 0.62) rgba(34, 197, 94, 0.08);
+  }
+
+  .themed-scrollbar::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  .themed-scrollbar::-webkit-scrollbar-track {
+    border-radius: 999px;
+    background: rgba(34, 197, 94, 0.08);
+  }
+
+  .themed-scrollbar::-webkit-scrollbar-thumb {
+    border: 2px solid transparent;
+    border-radius: 999px;
+    background: linear-gradient(180deg, rgba(34, 197, 94, 0.82), rgba(22, 163, 74, 0.72));
+    background-clip: padding-box;
+  }
+
+  .themed-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(180deg, rgba(22, 163, 74, 0.95), rgba(21, 128, 61, 0.85));
+    background-clip: padding-box;
+  }
 }
 
 @keyframes aboutReveal {

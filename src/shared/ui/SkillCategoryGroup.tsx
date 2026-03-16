@@ -7,7 +7,7 @@ type SkillCategoryGroupProps = {
 
 export function SkillCategoryGroup({ tags }: SkillCategoryGroupProps) {
   return (
-    <div className="flex flex-wrap gap-3">
+    <div className="flex flex-wrap gap-3.5">
       {tags.map((tag) => (
         <SkillTag key={`${tag.icon}-${tag.label}`} tag={tag} />
       ))}

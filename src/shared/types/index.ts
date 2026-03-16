@@ -30,6 +30,8 @@ export type AboutCapabilityTag = {
     | "github"
     | "jira"
     | "ai_tools"
+    | "productivity"
+    | "problem_solving"
     | "component_architecture"
     | "responsive_ui"
     | "clean_code"
@@ -60,5 +62,11 @@ export type AboutCapability = {
 
 export type SkillCategory = {
   title: string;
+  tags: AboutCapabilityTag[];
+};
+
+export type CapabilitySentence = {
+  number: string;
+  text: string;
   tags: AboutCapabilityTag[];
 };

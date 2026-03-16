@@ -1,4 +1,4 @@
-import type { AboutCapability, NavItem, Project, SkillCategory } from "../types";
+import type { AboutCapability, CapabilitySentence, NavItem, Project, SkillCategory } from "../types";
 
 export const navItems: NavItem[] = [
   { label: "Hakkimda", href: "#about" },
@@ -84,4 +84,48 @@ export const skillCategories: SkillCategory[] = [
       { icon: "ai_tools", label: "AI Tools" },
     ],
   },
+];
+
+export const capabilitySentences: CapabilitySentence[] = [
+  {
+    number: "01",
+    text: "Arayüzlerin sadece estetik değil, kullanıcıyı yönlendiren ve akıcı hissettiren yapılar olmasına önem veriyorum.",
+    tags: [
+      { icon: "responsive_ui", label: "Responsive UI" },
+      { icon: "interaction", label: "Interaction" },
+      { icon: "accessibility", label: "Accessibility" },
+      { icon: "design_systems", label: "Design Systems" },
+    ],
+  },
+  {
+    number: "02",
+    text: "Yeni özellikler eklendikçe bozulmayan ve geliştirilmeye açık kalan frontend mimarileri kurmaya odaklanırım.",
+    tags: [
+      { icon: "component_architecture", label: "Component Architecture" },
+      { icon: "clean_code", label: "Clean Code" },
+      { icon: "scalable_structure", label: "Scalable Structure" },
+      { icon: "reusable_components", label: "Reusable Components" },
+    ],
+  },
+  {
+    number: "03",
+    text: "Deneyimi sadece görsel düzen üzerinden değil, kullanıcı yolculuğu ve karar noktaları üzerinden değerlendirmeyi önemsiyorum.",
+    tags: [
+      { icon: "ux_ui", label: "UX/UI" },
+      { icon: "wireframe", label: "Wireframing" },
+      { icon: "user_flow", label: "User Flow" },
+    ],
+  },
+  {
+    number: "04",
+    text: "Frontend ile backend arasındaki veri akışını güvenli ve sürdürülebilir şekilde kurgulamayı geliştirme sürecinin önemli bir parçası olarak görüyorum.",
+    tags: [
+      { icon: "rest_api", label: "REST API" },
+      { icon: "data_fetching", label: "Data Fetching" },
+      { icon: "jwt", label: "JWT" },
+      { icon: "swagger", label: "Swagger" },
+      { icon: "frontend_backend", label: "Frontend-Backend Communication" },
+    ],
+  },
+
 ];

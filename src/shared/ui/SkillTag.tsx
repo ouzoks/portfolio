@@ -1,6 +1,7 @@
 import type { IconType } from "react-icons";
 import {
   FaBezierCurve,
+  FaBolt,
   FaCheckCircle,
   FaCubes,
   FaDatabase,
@@ -11,6 +12,7 @@ import {
   FaMobileAlt,
   FaMousePointer,
   FaProjectDiagram,
+  FaPuzzlePiece,
   FaRegCompass,
   FaRobot,
   FaServer,
@@ -51,6 +53,8 @@ const skillIcons: Record<AboutCapabilityTag["icon"], IconType> = {
   github: FaGithub,
   jira: SiJira,
   ai_tools: FaRobot,
+  productivity: FaBolt,
+  problem_solving: FaPuzzlePiece,
   component_architecture: FaCubes,
   responsive_ui: FaMobileAlt,
   clean_code: FaCheckCircle,
@@ -76,8 +80,8 @@ export function SkillTag({ tag }: SkillTagProps) {
   const Icon = skillIcons[tag.icon];
 
   return (
-    <span className="inline-flex items-center gap-2 rounded-full border border-tealBrand-500/20 bg-white/80 px-4 py-2 text-sm font-semibold text-ink-800 transition duration-200 hover:-translate-y-0.5 hover:border-tealBrand-500/45 hover:bg-white hover:text-tealBrand-600">
-      <span className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-tealBrand-500/10 text-tealBrand-600">
+    <span className="inline-flex items-center gap-2.5 rounded-full border border-tealBrand-500/18 bg-white/78 px-4 py-2.5 text-sm font-semibold text-ink-800 shadow-[0_14px_30px_-24px_rgba(17,17,17,0.35)] transition duration-300 ease-out hover:-translate-y-0.5 hover:border-tealBrand-500/45 hover:bg-white hover:shadow-[0_18px_34px_-24px_rgba(16,185,129,0.25)] hover:text-tealBrand-700">
+      <span className="inline-flex h-8 w-8 items-center justify-center rounded-full border border-tealBrand-500/12 bg-tealBrand-500/10 text-tealBrand-600">
         <Icon className="text-sm" aria-hidden="true" />
       </span>
       {tag.label}
