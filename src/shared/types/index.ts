@@ -9,9 +9,13 @@ export type StatItem = {
 };
 
 export type Project = {
+  number: string;
   title: string;
   description: string;
-  stack: string;
+  technologies: string[];
+  repoUrl: string;
+  liveDemoUrl?: string;
+  imageLabel: string;
 };
 
 export type AboutCapabilityTag = {

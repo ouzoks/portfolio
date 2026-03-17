@@ -9,21 +9,32 @@ export const navItems: NavItem[] = [
 
 export const projects: Project[] = [
   {
-    title: "SaaS Dashboard UI",
+    number: "01",
+    title: "Portfolio CMS Dashboard",
     description:
-      "Gercek zamanli metrikler, rol bazli ekranlar ve performans odakli component mimarisi.",
-    stack: "React, TypeScript, Zustand",
+      "Icerik guncellemelerini hizlandirmak icin tasarlanmis yonetim paneli. Rol bazli akislar, net bilgi hiyerarsisi ve hizli icerik operasyonlari odakta tutuldu.",
+    technologies: ["React", "TypeScript", "Tailwind CSS", "REST API"],
+    repoUrl: "https://github.com/your-username/portfolio-cms-dashboard",
+    liveDemoUrl: "https://portfolio-cms-demo.example.com",
+    imageLabel: "Portfolio CMS dashboard preview",
   },
   {
-    title: "E-Commerce Frontend",
+    number: "02",
+    title: "E-Commerce Storefront",
     description:
-      "Urun filtreleme, sepet akislarinda hizli etkilesim ve mobil odakli checkout deneyimi.",
-    stack: "React, Tailwind, React Router",
+      "Kategori bazli gezinme, urun filtreleme ve mobil odakli satin alma akislarini daha rahat hale getirmek icin gelistirilmis modern storefront arayuzu.",
+    technologies: ["React", "JavaScript", "Tailwind CSS", "React Router"],
+    repoUrl: "https://github.com/your-username/ecommerce-storefront",
+    imageLabel: "E-commerce storefront preview",
   },
   {
-    title: "Booking Platform",
-    description: "Takvim tabanli rezervasyon akislarinda temiz bilgi mimarisi ve hizli akis.",
-    stack: "React, TS, REST API",
+    number: "03",
+    title: "Booking & Reservation Platform",
+    description:
+      "Takvim tabanli rezervasyon sureclerini daha okunabilir ve guvenilir hale getiren, durum guncellemeleri ve form akislarina odaklanan bir urun deneyimi.",
+    technologies: ["React", "TypeScript", "REST API", "Material UI"],
+    repoUrl: "https://github.com/your-username/booking-platform",
+    imageLabel: "Booking platform preview",
   },
 ];
 
