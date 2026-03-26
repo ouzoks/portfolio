@@ -1,5 +1,6 @@
 import type { Project } from "../types";
 import { PhotoPlaceholder } from "./PhotoPlaceholder";
+import { ProjectDetailsTabs } from "./ProjectDetailsTabs";
 
 type ProjectShowcaseItemProps = {
   project: Project;
@@ -46,19 +47,9 @@ export function ProjectShowcaseItem({ project, align }: ProjectShowcaseItemProps
         <span className="text-sm font-bold tracking-[0.18em] text-tealBrand-600">{project.number}</span>
         <h3 className="mt-4 text-3xl leading-tight text-ink-900 md:text-4xl">{project.title}</h3>
         <p className="mt-5 max-w-[58ch] text-base leading-8 text-ink-700 md:text-lg">
-          {project.description}
+          {project.summary}
         </p>
-
-        <div className="mt-6 flex flex-wrap gap-3">
-          {project.technologies.map((technology) => (
-            <span
-              key={`${project.title}-${technology}`}
-              className="inline-flex rounded-full border border-tealBrand-500/20 bg-white/80 px-4 py-2 text-sm font-semibold text-ink-800"
-            >
-              {technology}
-            </span>
-          ))}
-        </div>
+        <ProjectDetailsTabs project={project} />
 
         <div className="mt-8 flex flex-wrap gap-3">
           <ProjectActionLink href={project.repoUrl} label="GitHub Repo" />

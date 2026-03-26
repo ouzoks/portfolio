@@ -11,30 +11,90 @@ export const projects: Project[] = [
   {
     number: "01",
     title: "Portfolio CMS Dashboard",
-    description:
-      "Icerik guncellemelerini hizlandirmak icin tasarlanmis yonetim paneli. Rol bazli akislar, net bilgi hiyerarsisi ve hizli icerik operasyonlari odakta tutuldu.",
-    technologies: ["React", "TypeScript", "Tailwind CSS", "REST API"],
+    summary:
+      "Icerik operasyonlarini daha hizli ve net hale getirmek icin tasarlanmis yonetim paneli deneyimi.",
+    technologies: [
+      { icon: "react", label: "React" },
+      { icon: "typescript", label: "TypeScript" },
+      { icon: "tailwind", label: "Tailwind CSS" },
+      { icon: "materialui", label: "Material UI" },
+      { icon: "dotnet_core", label: ".NET Core" },
+    ],
     repoUrl: "https://github.com/your-username/portfolio-cms-dashboard",
     liveDemoUrl: "https://portfolio-cms-demo.example.com",
     imageLabel: "Portfolio CMS dashboard preview",
+    overview: {
+      problem:
+        "Icerik ekiplerinin sayfa, metin ve gorsel guncellemelerini daginik ekranlar yerine tek bir panelden yonetmeye ihtiyaci vardi.",
+      solution:
+        "Rollere gore sadelesen ekranlar, acik durum etiketleri ve hizli duzenleme akislarina sahip merkezi bir dashboard kurguladim.",
+      impact:
+        "Icerik guncelleme sureci daha hizli ilerledi ve panel icinde karar vermek icin gereken bilgi daha rahat okunur hale geldi.",
+    },
+    implementation: {
+      architecture:
+        "Bilesenleri panel modullerine gore ayirip tekrar kullanilabilir action, table ve form alanlari etrafinda kurguladim.",
+      apiPerformance:
+        "Liste ekranlarinda veri cekme akislarini sade tuttum, yukleme ve bos durumlarini ayri yoneterek daha stabil bir deneyim hedefledim.",
+    },
   },
   {
     number: "02",
     title: "E-Commerce Storefront",
-    description:
-      "Kategori bazli gezinme, urun filtreleme ve mobil odakli satin alma akislarini daha rahat hale getirmek icin gelistirilmis modern storefront arayuzu.",
-    technologies: ["React", "JavaScript", "Tailwind CSS", "React Router"],
+    summary:
+      "Mobil odakli urun kesfi ve satin alma akislarini hizlandiran modern storefront arayuzu.",
+    technologies: [
+      { icon: "react", label: "React" },
+      { icon: "javascript", label: "JavaScript" },
+      { icon: "tailwind", label: "Tailwind CSS" },
+      { icon: "responsive_ui", label: "Responsive UI" },
+      { icon: "interaction", label: "Interaction" },
+    ],
     repoUrl: "https://github.com/your-username/ecommerce-storefront",
     imageLabel: "E-commerce storefront preview",
+    overview: {
+      problem:
+        "Kullanici urunleri gezerken filtreleme, listeleme ve sepete ekleme akislarinin hiz kaybetmeden ilerlemesi gerekiyordu.",
+      solution:
+        "Kategori gecisleri, filtre paneli ve urun kartlarinin etkilesimini sade bir bilgi mimarisiyle yeniden duzenledim.",
+      impact:
+        "Kullanici urunler arasinda daha rahat gezebildi ve satin alma akisinda gereksiz adim hissi azaldi.",
+    },
+    implementation: {
+      architecture:
+        "Listeleme, filtreleme ve kart alanlarini birbirinden bagimsiz ama ayni tasarim dilinde calisan yapilar olarak ayirdim.",
+      apiPerformance:
+        "Arayuz durumlarini filtre degisimleriyle birlikte kontrollu yonetip, veri akisinin kullanicida kopukluk hissi yaratmamasina odaklandim.",
+    },
   },
   {
     number: "03",
     title: "Booking & Reservation Platform",
-    description:
-      "Takvim tabanli rezervasyon sureclerini daha okunabilir ve guvenilir hale getiren, durum guncellemeleri ve form akislarina odaklanan bir urun deneyimi.",
-    technologies: ["React", "TypeScript", "REST API", "Material UI"],
+    summary:
+      "Rezervasyon surecini daha okunur ve guvenilir hale getiren takvim tabanli urun deneyimi.",
+    technologies: [
+      { icon: "react", label: "React" },
+      { icon: "typescript", label: "TypeScript" },
+      { icon: "rest_api", label: "REST API" },
+      { icon: "materialui", label: "Material UI" },
+      { icon: "data_fetching", label: "Data Fetching" },
+    ],
     repoUrl: "https://github.com/your-username/booking-platform",
     imageLabel: "Booking platform preview",
+    overview: {
+      problem:
+        "Rezervasyon akislarinda tarih secimi, durum bilgisi ve form adimlari kullanici icin kolayca karmasik hale gelebiliyordu.",
+      solution:
+        "Takvim odakli akisi sadeleştirip kritik durum mesajlarini ve form gecislerini daha net bir sira icinde yeniden kurguladim.",
+      impact:
+        "Kullanici bir rezervasyonun hangi asamada oldugunu daha rahat anlayabildi ve akis icinde kaybolma riski azaldi.",
+    },
+    implementation: {
+      architecture:
+        "Takvim, detay paneli ve form bolumlerini birbirinden ayrilan ama ayni veri modeline baglanan moduller olarak duzenledim.",
+      apiPerformance:
+        "Veri durumlarini secili tarih ve rezervasyon detayina gore yoneterek, degisen ekran parcalarinin daha kontrollu calismasini sagladim.",
+    },
   },
 ];
 

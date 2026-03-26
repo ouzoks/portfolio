@@ -11,11 +11,20 @@ export type StatItem = {
 export type Project = {
   number: string;
   title: string;
-  description: string;
-  technologies: string[];
+  summary: string;
+  technologies: AboutCapabilityTag[];
   repoUrl: string;
   liveDemoUrl?: string;
   imageLabel: string;
+  overview: {
+    problem: string;
+    solution: string;
+    impact: string;
+  };
+  implementation: {
+    architecture: string;
+    apiPerformance: string;
+  };
 };
 
 export type AboutCapabilityTag = {
