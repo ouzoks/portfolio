@@ -14,7 +14,7 @@ export function ProjectDetailsTabs({ project }: ProjectDetailsTabsProps) {
   const [contentHeight, setContentHeight] = useState(0);
   const overviewMeasureRef = useRef<HTMLDivElement>(null);
   const implementationMeasureRef = useRef<HTMLDivElement>(null);
-  const implementationSummary = `${project.implementation.architecture} ${project.implementation.apiPerformance}`;
+  const implementationSummary = `${project.implementation.architecture}`;
 
   useLayoutEffect(() => {
     const measure = () => {
@@ -47,7 +47,7 @@ export function ProjectDetailsTabs({ project }: ProjectDetailsTabsProps) {
           <FaArrowRight className="text-xs" aria-hidden="true" />
         </span>
         <p className="max-w-[58ch] text-base leading-8 text-ink-700 md:text-[1.02rem]">
-          {project.overview.solution} {project.overview.impact}
+          {project.overview.solution}
         </p>
       </div>
     </div>

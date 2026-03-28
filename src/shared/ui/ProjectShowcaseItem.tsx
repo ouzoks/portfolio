@@ -37,16 +37,29 @@ export function ProjectShowcaseItem({ project, align }: ProjectShowcaseItemProps
   return (
     <article className="grid gap-8 border-t border-tealBrand-500/18 pt-8 lg:grid-cols-2 lg:items-center lg:gap-12">
       <div className={isImageRight ? "lg:order-2" : undefined}>
-        <PhotoPlaceholder
-          label={project.imageLabel}
-          className="min-h-[280px] rounded-[1.8rem] border-tealBrand-500/22 bg-[linear-gradient(135deg,rgba(34,197,94,0.14),rgba(255,255,255,0.94))] md:min-h-[360px]"
-        />
+        {project.imageSrc ? (
+          <div className="group relative aspect-[16/10] rounded-[1.8rem] transition-transform duration-500 ease-out hover:scale-[1.02]">
+            <div className="relative h-full overflow-hidden rounded-[1.8rem]">
+              <img
+                src={project.imageSrc}
+                alt={project.imageLabel}
+                className="absolute inset-0 h-full w-full rounded-[1.8rem] object-cover object-center"
+              />
+              <div className="pointer-events-none absolute inset-0 rounded-[1.8rem] bg-[linear-gradient(180deg,rgba(248,255,250,0.62),rgba(236,255,240,0.54))] transition-opacity duration-500 ease-out group-hover:opacity-0" />
+            </div>
+          </div>
+        ) : (
+          <PhotoPlaceholder
+            label={project.imageLabel}
+            src={project.imageSrc}
+            className="min-h-[280px] rounded-[1.8rem] border-tealBrand-500/22 bg-[linear-gradient(135deg,rgba(34,197,94,0.14),rgba(255,255,255,0.94))] md:min-h-[360px]"
+          />
+        )}
       </div>
 
       <div className={isImageRight ? "lg:order-1" : undefined}>
-        <span className="text-sm font-bold tracking-[0.18em] text-tealBrand-600">{project.number}</span>
         <h3 className="mt-4 text-3xl leading-tight text-ink-900 md:text-4xl">{project.title}</h3>
-        <p className="mt-5 max-w-[58ch] text-base leading-8 text-ink-700 md:text-lg">
+        <p className="mt-5 mb-14 max-w-[58ch] text-base leading-8 text-ink-700 md:text-lg">
           {project.summary}
         </p>
         <ProjectDetailsTabs project={project} />

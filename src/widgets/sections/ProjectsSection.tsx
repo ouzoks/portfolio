@@ -5,7 +5,8 @@ export function ProjectsSection() {
   return (
     <section id="projects" className="shell py-20">
       <p className="section-eyebrow">Selected Work</p>
-      <h2 className="section-title">One cikan projeler</h2>
+      
+      <h2 className="my-10 section-title">One cikan projeler</h2> {/* section-title text-center */}
       <div className="mt-10 space-y-12">
         {projects.map((project, index) => (
           <ProjectShowcaseItem

@@ -9,21 +9,20 @@ export type StatItem = {
 };
 
 export type Project = {
-  number: string;
+  number?: string;
   title: string;
   summary: string;
   technologies: AboutCapabilityTag[];
   repoUrl: string;
   liveDemoUrl?: string;
   imageLabel: string;
+  imageSrc?: string;
   overview: {
     problem: string;
     solution: string;
-    impact: string;
   };
   implementation: {
     architecture: string;
-    apiPerformance: string;
   };
 };
 

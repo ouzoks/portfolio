@@ -1,4 +1,7 @@
 import type { AboutCapability, CapabilitySentence, NavItem, Project, SkillCategory } from "../types";
+import rusturkproject from "../assets/rusturkproject.png";
+import fitnesstaskproject from "../assets/fitnesstaskproject.png";
+import mumakproject from "../assets/mumakproject.png";
 
 export const navItems: NavItem[] = [
   { label: "Hakkimda", href: "#about" },
@@ -10,32 +13,28 @@ export const navItems: NavItem[] = [
 export const projects: Project[] = [
   {
     number: "01",
-    title: "Portfolio CMS Dashboard",
+    title: "RUS&TURK CLUB",
     summary:
-      "Icerik operasyonlarini daha hizli ve net hale getirmek icin tasarlanmis yonetim paneli deneyimi.",
+      "Rus kadınları ve Türk erkeklerini tek bir platformda buluşturarak, ciddi ilişki odaklı güvenilir bir iletişim ortamı sunan bir sosyal platform.",
     technologies: [
       { icon: "react", label: "React" },
-      { icon: "typescript", label: "TypeScript" },
-      { icon: "tailwind", label: "Tailwind CSS" },
       { icon: "materialui", label: "Material UI" },
       { icon: "dotnet_core", label: ".NET Core" },
+      { icon: "mssql", label: "MSSQL"},
     ],
     repoUrl: "https://github.com/your-username/portfolio-cms-dashboard",
     liveDemoUrl: "https://portfolio-cms-demo.example.com",
     imageLabel: "Portfolio CMS dashboard preview",
+    imageSrc: rusturkproject,
     overview: {
       problem:
-        "Icerik ekiplerinin sayfa, metin ve gorsel guncellemelerini daginik ekranlar yerine tek bir panelden yonetmeye ihtiyaci vardi.",
+        "Platformu, kullanıcıların daha anlamlı ve ciddi ilişkiler kurabileceği bir deneyim sunacak şekilde tasarladım. Profil, eşleşme ve iletişim akışlarını sadeleştirerek daha anlaşılır bir yapı oluşturdum.",
       solution:
-        "Rollere gore sadelesen ekranlar, acik durum etiketleri ve hizli duzenleme akislarina sahip merkezi bir dashboard kurguladim.",
-      impact:
-        "Icerik guncelleme sureci daha hizli ilerledi ve panel icinde karar vermek icin gereken bilgi daha rahat okunur hale geldi.",
+        "Aynı zamanda güven ve kalite hissini artırmak için gereksiz karmaşadan uzak, sade ve kontrollü bir yapı kurdum. Kullanıcıların daha bilinçli bağlantılar kurabilmesi için bilgi sunumunu ve etkileşim alanlarını optimize ettim.",
     },
     implementation: {
       architecture:
-        "Bilesenleri panel modullerine gore ayirip tekrar kullanilabilir action, table ve form alanlari etrafinda kurguladim.",
-      apiPerformance:
-        "Liste ekranlarinda veri cekme akislarini sade tuttum, yukleme ve bos durumlarini ayri yoneterek daha stabil bir deneyim hedefledim.",
+        "React ve Material UI ile modüler bir arayüz geliştirirken, .NET Core ve MSSQL ile kullanıcı yönetimi ve veri akışlarını yöneten; kimlik doğrulama, rol bazlı erişim ve API entegrasyonlarıyla güvenli ve ölçeklenebilir bir sistem kurdum.",
     },
   },
   {
@@ -52,19 +51,16 @@ export const projects: Project[] = [
     ],
     repoUrl: "https://github.com/your-username/ecommerce-storefront",
     imageLabel: "E-commerce storefront preview",
+    imageSrc: fitnesstaskproject,
     overview: {
       problem:
         "Kullanici urunleri gezerken filtreleme, listeleme ve sepete ekleme akislarinin hiz kaybetmeden ilerlemesi gerekiyordu.",
       solution:
-        "Kategori gecisleri, filtre paneli ve urun kartlarinin etkilesimini sade bir bilgi mimarisiyle yeniden duzenledim.",
-      impact:
-        "Kullanici urunler arasinda daha rahat gezebildi ve satin alma akisinda gereksiz adim hissi azaldi.",
+        "Kategori gecisleri, filtre paneli ve urun kartlarinin etkilesimini sade bir bilgi mimarisiyle yeniden duzenledim. Kullanici urunler arasinda daha rahat gezebildi ve satin alma akisinda gereksiz adim hissi azaldi.",
     },
     implementation: {
       architecture:
-        "Listeleme, filtreleme ve kart alanlarini birbirinden bagimsiz ama ayni tasarim dilinde calisan yapilar olarak ayirdim.",
-      apiPerformance:
-        "Arayuz durumlarini filtre degisimleriyle birlikte kontrollu yonetip, veri akisinin kullanicida kopukluk hissi yaratmamasina odaklandim.",
+        "Listeleme, filtreleme ve kart alanlarini birbirinden bagimsiz ama ayni tasarim dilinde calisan yapilar olarak ayirdim. Arayuz durumlarini filtre degisimleriyle birlikte kontrollu yonetip, veri akisinin kullanicida kopukluk hissi yaratmamasina odaklandim.",
     },
   },
   {
@@ -81,19 +77,16 @@ export const projects: Project[] = [
     ],
     repoUrl: "https://github.com/your-username/booking-platform",
     imageLabel: "Booking platform preview",
+    imageSrc: mumakproject,
     overview: {
       problem:
         "Rezervasyon akislarinda tarih secimi, durum bilgisi ve form adimlari kullanici icin kolayca karmasik hale gelebiliyordu.",
       solution:
-        "Takvim odakli akisi sadeleştirip kritik durum mesajlarini ve form gecislerini daha net bir sira icinde yeniden kurguladim.",
-      impact:
-        "Kullanici bir rezervasyonun hangi asamada oldugunu daha rahat anlayabildi ve akis icinde kaybolma riski azaldi.",
+        "Takvim odakli akisi sadeleştirip kritik durum mesajlarini ve form gecislerini daha net bir sira icinde yeniden kurguladim. Kullanici bir rezervasyonun hangi asamada oldugunu daha rahat anlayabildi ve akis icinde kaybolma riski azaldi.",
     },
     implementation: {
       architecture:
-        "Takvim, detay paneli ve form bolumlerini birbirinden ayrilan ama ayni veri modeline baglanan moduller olarak duzenledim.",
-      apiPerformance:
-        "Veri durumlarini secili tarih ve rezervasyon detayina gore yoneterek, degisen ekran parcalarinin daha kontrollu calismasini sagladim.",
+        "Takvim, detay paneli ve form bolumlerini birbirinden ayrilan ama ayni veri modeline baglanan moduller olarak duzenledim. Veri durumlarini secili tarih ve rezervasyon detayina gore yoneterek, degisen ekran parcalarinin daha kontrollu calismasini sagladim.",
     },
   },
 ];
