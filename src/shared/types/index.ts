@@ -82,3 +82,11 @@ export type CapabilitySentence = {
   text: string;
   tags: AboutCapabilityTag[];
 };
+
+export type Experience = {
+  period: string;
+  role: string;
+  company: string;
+  employmentType: string;
+  description: string;
+};

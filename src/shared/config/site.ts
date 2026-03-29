@@ -1,4 +1,4 @@
-import type { AboutCapability, CapabilitySentence, NavItem, Project, SkillCategory } from "../types";
+import type { AboutCapability, CapabilitySentence, Experience, NavItem, Project, SkillCategory } from "../types";
 import rusturkproject from "../assets/rusturkproject.png";
 import fitnesstaskproject from "../assets/fitnesstaskproject.png";
 import mumakproject from "../assets/mumakproject.png";
@@ -6,7 +6,7 @@ import mumakproject from "../assets/mumakproject.png";
 export const navItems: NavItem[] = [
   { label: "Hakkimda", href: "#about" },
   { label: "Projeler", href: "#projects" },
-  { label: "Galeri", href: "#gallery" },
+  { label: "Deneyim", href: "#experience" },
   { label: "Iletisim", href: "#contact" },
 ];
 
@@ -192,4 +192,39 @@ export const capabilitySentences: CapabilitySentence[] = [
     ],
   },
 
+];
+
+export const experiences: Experience[] = [
+  {
+    period: "May 2023 - Tem 2023",
+    role: "Yazilim Muhendisi",
+    company: "F8 Bilisim ve Danismanlik Hizmetleri",
+    employmentType: "Yari zamanli",
+    description:
+      "PL/SQL tarafinda sorgu, prosedur ve raporlama akislarina odaklandim. IFS ERP platformunda ihtiyaca ozel gelistirmeler yaparak veri odakli sureclerin daha kontrollu ve izlenebilir ilerlemesine katkida bulundum.",
+  },
+  {
+    period: "Eyl 2024",
+    role: "Yazilim Stajyeri",
+    company: "F8 Bilisim ve Danismanlik Hizmetleri",
+    employmentType: "Tam zamanli",
+    description:
+      "Dell Boomi platformu ile sistemler arasi entegrasyon akislarini inceleyip uygulama sureclerine destek oldum. Teknik dokumantasyonlari okunabilir hale getirme ve bu entegrasyonlari sunum formatinda anlatma tarafinda da deneyim kazandim.",
+  },
+  {
+    period: "Eyl 2025",
+    role: "Yazilim Stajyeri",
+    company: "BNTPRO Bilgi ve Iletisim Hizmetleri A.S.",
+    employmentType: "Tam zamanli",
+    description:
+      "Linux sistemleri uzerinde RHEL ve CentOS yonetimi, temel guvenlik yapilandirmalari ve sunucu operasyonlariyla ilgilendim. Ayni zamanda PHP Laravel ile MVC mimarisinde uygulama gelistirme, 2FA, rol bazli yetkilendirme ve guvenlik modulleri uzerinde calistim.",
+  },
+  {
+    period: "2025 - Bugun",
+    role: "Freelance Frontend Developer",
+    company: "Independent Product Work",
+    employmentType: "Freelance",
+    description:
+      "Kendi projelerim ve farkli urun fikirleri uzerinden frontend gelistirme, UI dusuncesi, API entegrasyonu ve urun deneyimi tarafinda kendimi gelistirmeye devam ediyorum. Bu surecte gercek senaryolar uzerinde calisarak hem teknik hem de urun odakli bakisimi derinlestiriyorum.",
+  },
 ];
