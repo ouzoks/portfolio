@@ -4,8 +4,10 @@ import { ExperienceTimelineItem } from "../../shared/ui/ExperienceTimelineItem";
 export function ExperiencesSection() {
   return (
     <section id="experience" className="shell py-20">
+
+      <p className="section-eyebrow">Experience</p>
       <div className="mx-auto max-w-3xl text-center">
-        <p className="section-eyebrow">Experience</p>
+        
         <h2 className="section-title">Calisma yolculugum</h2>
       </div>
 
