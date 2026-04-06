@@ -5,7 +5,8 @@ import mumakproject from "../assets/mumakproject.png";
 import isiklogo from "../assets/isiklogo.png";
 
 export const navItems: NavItem[] = [
-  { label: "Hakkimda", href: "#about" },
+  { label: "Ne Yapıyorum", href: "#about" },
+  { label: "Nasıl Yapıyorum", href: "#skills" },
   { label: "Projeler", href: "#projects" },
   { label: "Deneyim", href: "#experience" },
   { label: "Iletisim", href: "#contact" },

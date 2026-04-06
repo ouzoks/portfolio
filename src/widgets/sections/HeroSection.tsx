@@ -1,35 +1,29 @@
 import { useState } from "react";
-import { PhotoPlaceholder } from "../../shared/ui/PhotoPlaceholder";
 import profilePicture from "../../shared/assets/profile-picture.png";
+import { PhotoPlaceholder } from "../../shared/ui/PhotoPlaceholder";
+import { Reveal } from "../../shared/ui/Reveal";
 
 export function HeroSection() {
   const [showBioCard, setShowBioCard] = useState(false);
   const text = "OGUZ OKSUZOMER";
 
   return (
-    <section className="relative flex min-h-screen items-center justify-center overflow-hidden">
-
-      {/* Marquee */}
-      <div className="absolute inset-0 flex items-center overflow-hidden pointer-events-none">
-
-        {/* Track */}
+    <section id="home" className="relative flex min-h-screen items-center justify-center overflow-hidden">
+      <Reveal className="pointer-events-none absolute inset-0 flex items-center overflow-hidden" delayMs={280}>
         <div className="flex animate-marquee whitespace-nowrap">
-
-          {/* içerik */}
           {[...Array(4)].map((_, i) => (
             <span
               key={i}
-              className="mx-20 text-[90px] md:text-[140px] font-extrabold tracking-widest text-white/90"
+              className="mx-20 text-[90px] font-extrabold tracking-widest text-white/90 md:text-[140px]"
             >
               {text}
             </span>
           ))}
-
         </div>
-      </div>
+      </Reveal>
 
-      {/* Photo + Bio Card */}
       <div className="relative z-10 flex w-full items-center justify-center px-4">
+        <Reveal delayMs={80} yOffset={18}>
         <button
           type="button"
           onClick={() => setShowBioCard((prev) => !prev)}
@@ -43,47 +37,53 @@ export function HeroSection() {
           <PhotoPlaceholder
             label="profile-picture"
             src={profilePicture}
-            className="h-72 w-72 rounded-full object-cover transition duration-300 group-hover:scale-[1.03] group-hover:ring-8 group-hover:ring-tealBrand-500/60 group-hover:shadow-[0_0_0_14px_rgba(34,197,94,0.28)] md:h-80 md:w-80"
+            className="h-72 w-72 rounded-full object-cover transition duration-300 group-hover:scale-[1.03] group-hover:ring-8 group-hover:ring-tealBrand-500/60 group-hover:shadow-[0_0_0_14px_rgba(99,245,198,0.28)] md:h-80 md:w-80"
           />
         </button>
+        </Reveal>
 
         <article
           id="hero-bio-card"
-          className={`pointer-events-none absolute left-1/2 top-1/2 z-30 w-[min(94vw,700px)] -translate-y-1/2 rounded-2xl border border-black/10 bg-white/95 p-5 text-left shadow-2xl backdrop-blur-sm transition-all duration-1000 ease-out md:p-8 ${
+          className={`pointer-events-none absolute left-1/2 top-1/2 z-30 w-[min(94vw,700px)] -translate-y-1/2 rounded-[1.75rem] border border-white/10 bg-[linear-gradient(180deg,rgba(18,30,28,0.96),rgba(10,19,17,0.94))] p-5 text-left shadow-[0_24px_54px_-28px_rgba(0,0,0,0.62)] backdrop-blur-xl transition-all duration-1000 ease-out md:p-8 ${
             showBioCard
               ? "-translate-x-1/2 md:-translate-x-[20%] scale-100 opacity-100"
               : "-translate-x-1/2 md:-translate-x-[20%] scale-95 opacity-0"
           }`}
         >
-         <p className="leading-relaxed text-lg text-ink-700">
-  Merhaba, web siteme hoş geldiniz.
-  <br /><br />
-  Kısaca yaptığım işi anlatacak olursam,
-  <span className="font-semibold text-ink-900"> karmaşık fikirleri </span>
-  daha 
-  <span className="font-semibold text-tealBrand-600"> sade ve anlaşılır çıktılara </span>
-  dönüştürür, 
-  <span className="font-semibold text-ink-900"> kullanıcı senaryolarını </span>
-  uygulanabilir hale getiririm.
-  <br /><br />
-  Amacım, kullanıcıların
-  <span className="font-semibold text-tealBrand-600"> akışta kaybolmadan </span>
-  ilerleyebileceği, 
-  <span className="font-semibold text-ink-900"> iyi düşünülmüş </span>
-  ve 
-  <span className="font-semibold text-tealBrand-600"> sürdürülebilir </span>
-  arayüzler ve fonksiyonlar oluşturmaktır.
-</p>
+          <p className="leading-relaxed text-lg text-mist-300">
+            Merhaba, web siteme hos geldiniz.
+            <br />
+            <br />
+            Kisaca yaptigim isi anlatacak olursam,
+            <span className="font-semibold text-mist-50"> karmasik fikirleri </span>
+            daha
+            <span className="font-semibold text-tealBrand-500"> sade ve anlasilir ciktilara </span>
+            donusturur,
+            <span className="font-semibold text-mist-50"> kullanici senaryolarini </span>
+            uygulanabilir hale getiririm.
+            <br />
+            <br />
+            Amacim, kullanicilarin
+            <span className="font-semibold text-tealBrand-500"> akista kaybolmadan </span>
+            ilerleyebilecegi,
+            <span className="font-semibold text-mist-50"> iyi dusunulmus </span>
+            ve
+            <span className="font-semibold text-tealBrand-500"> surdurulebilir </span>
+            arayuzler ve fonksiyonlar olusturmaktir.
+          </p>
         </article>
       </div>
 
-      <p className="absolute bottom-6 left-5 z-10 text-[11px] font-semibold uppercase tracking-[0.14em] text-black/70 md:text-xs">
-        Istanbul, Turkiye
-      </p>
-      <p className="absolute bottom-6 right-5 z-10 max-w-[12ch] text-right text-xl font-extrabold uppercase leading-tight text-black md:text-4xl">
-        Junior Software Engineer
-      </p>
-
+      <Reveal className="absolute bottom-6 left-5 z-10" delayMs={420} yOffset={16}>
+        <p className="text-[11px] font-semibold uppercase tracking-[0.14em] text-mist-200/80 md:text-xs">
+          Istanbul, Turkiye
+        </p>
+      </Reveal>
+      <Reveal className="absolute bottom-6 right-5 z-10" delayMs={480} yOffset={16}>
+        <p className="max-w-[12ch] text-right text-xl font-extrabold uppercase leading-tight text-mist-50 md:text-4xl">
+          Junior Software Engineer
+        </p>
+      </Reveal>
     </section>
   );
 }

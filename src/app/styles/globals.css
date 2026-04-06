@@ -8,10 +8,15 @@
   body,
   #root {
     min-height: 100%;
+    overflow-x: clip;
+  }
+
+  html {
+    scroll-behavior: smooth;
   }
 
   body {
-    @apply m-0 bg-sand-100 font-sans text-ink-800 antialiased;
+    @apply m-0 bg-night-950 font-sans text-mist-50 antialiased;
   }
 
   * {
@@ -35,7 +40,7 @@
   }
 
   .section-title {
-    @apply mt-3 text-3xl leading-tight md:text-5xl;
+    @apply mt-3 text-3xl leading-tight text-mist-50 md:text-5xl;
   }
 
   .site-background {

@@ -21,8 +21,8 @@ function ProjectActionLink({
 
   const variantClassName =
     variant === "primary"
-      ? "bg-tealBrand-500 text-white shadow-soft hover:-translate-y-0.5 hover:bg-tealBrand-600"
-      : "border border-tealBrand-500/30 bg-white text-ink-800 hover:-translate-y-0.5 hover:border-tealBrand-500/55 hover:text-tealBrand-600";
+      ? "bg-tealBrand-500 text-night-950 shadow-soft hover:-translate-y-0.5 hover:bg-tealBrand-600 hover:text-night-950"
+      : "border border-white/10 bg-white/5 text-mist-100 backdrop-blur-sm hover:-translate-y-0.5 hover:border-tealBrand-500/45 hover:text-tealBrand-500";
 
   return (
     <a href={href} target="_blank" rel="noreferrer" className={`${baseClassName} ${variantClassName}`}>
@@ -45,21 +45,21 @@ export function ProjectShowcaseItem({ project, align }: ProjectShowcaseItemProps
                 alt={project.imageLabel}
                 className="absolute inset-0 h-full w-full rounded-[1.8rem] object-cover object-center"
               />
-              <div className="pointer-events-none absolute inset-0 rounded-[1.8rem] bg-[linear-gradient(180deg,rgba(248,255,250,0.62),rgba(236,255,240,0.54))] transition-opacity duration-500 ease-out group-hover:opacity-0" />
+              <div className="pointer-events-none absolute inset-0 rounded-[1.8rem] bg-[linear-gradient(180deg,rgba(6,12,11,0.62),rgba(8,18,16,0.44))] transition-opacity duration-500 ease-out group-hover:opacity-0" />
             </div>
           </div>
         ) : (
           <PhotoPlaceholder
             label={project.imageLabel}
             src={project.imageSrc}
-            className="min-h-[280px] rounded-[1.8rem] border-tealBrand-500/22 bg-[linear-gradient(135deg,rgba(34,197,94,0.14),rgba(255,255,255,0.94))] md:min-h-[360px]"
+            className="min-h-[280px] rounded-[1.8rem] border-white/10 bg-[linear-gradient(135deg,rgba(99,245,198,0.12),rgba(16,26,24,0.96))] md:min-h-[360px]"
           />
         )}
       </div>
 
       <div className={isImageRight ? "lg:order-1" : undefined}>
-        <h3 className="mt-4 text-3xl leading-tight text-ink-900 md:text-4xl">{project.title}</h3>
-        <p className="mt-5 mb-14 max-w-[58ch] text-base leading-8 text-ink-700 md:text-lg">
+        <h3 className="mt-4 text-3xl leading-tight text-mist-50 md:text-4xl">{project.title}</h3>
+        <p className="mb-14 mt-5 max-w-[58ch] text-base leading-8 text-mist-300 md:text-lg">
           {project.summary}
         </p>
         <ProjectDetailsTabs project={project} />

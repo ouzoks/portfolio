@@ -10,8 +10,8 @@ export function PhotoPlaceholder({ label, className, src }: PhotoPlaceholderProp
   return (
     <div
       className={cn(
-        "relative grid min-h-44 place-items-center overflow-hidden rounded-2xl border border-dashed border-ink-700/30",
-        "bg-[linear-gradient(135deg,rgba(47,158,68,0.12),rgba(255,255,255,0.9))]",
+        "relative grid min-h-44 place-items-center overflow-hidden rounded-[1.8rem] border border-white/10",
+        "bg-[linear-gradient(135deg,rgba(99,245,198,0.12),rgba(16,26,24,0.96))]",
         className,
       )}
     >

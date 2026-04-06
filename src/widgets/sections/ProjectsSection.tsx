@@ -1,19 +1,19 @@
 import { projects } from "../../shared/config/site";
 import { ProjectShowcaseItem } from "../../shared/ui/ProjectShowcaseItem";
+import { Reveal } from "../../shared/ui/Reveal";
 
 export function ProjectsSection() {
   return (
     <section id="projects" className="shell py-20">
-      <p className="section-eyebrow">Selected Work</p>
-      
-      <h2 className="my-10 section-title">One cikan projeler</h2> {/* section-title text-center */}
+      <Reveal>
+        <p className="section-eyebrow">Selected Work</p>
+        <h2 className="my-10 section-title text-center">One cikan projeler</h2>
+      </Reveal>
       <div className="mt-10 space-y-12">
         {projects.map((project, index) => (
-          <ProjectShowcaseItem
-            key={project.title}
-            project={project}
-            align={index % 2 === 1 ? "right" : "left"}
-          />
+          <Reveal key={project.title} delayMs={index * 90}>
+            <ProjectShowcaseItem project={project} align={index % 2 === 1 ? "right" : "left"} />
+          </Reveal>
         ))}
       </div>
     </section>

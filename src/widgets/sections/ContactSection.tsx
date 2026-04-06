@@ -1,15 +1,16 @@
 import { useEffect, useRef, useState } from "react";
 import { FaGithub, FaLinkedinIn } from "react-icons/fa";
+import { Reveal } from "../../shared/ui/Reveal";
 
 const clamp = (value: number, min: number, max: number) => Math.min(Math.max(value, min), max);
 
 export function ContactSection() {
   const sectionRef = useRef<HTMLElement | null>(null);
   const [motion, setMotion] = useState({
-    scaleX: 0.96,
-    scaleY: 0.92,
-    translateY: 20,
-    letterSpacing: -0.085,
+    scaleX: 0.72,
+    scaleY: 0.58,
+    translateY: 84,
+    letterSpacing: -0.18,
   });
 
   useEffect(() => {
@@ -25,10 +26,10 @@ export function ContactSection() {
       const eased = 1 - (1 - progress) ** 3;
 
       setMotion({
-        scaleX: 0.96 + eased * 0.12,
-        scaleY: 0.92 + eased * 0.1,
-        translateY: 20 - eased * 20,
-        letterSpacing: -0.085 + eased * 0.03,
+        scaleX: 0.72 + eased * 0.44,
+        scaleY: 0.58 + eased * 0.38,
+        translateY: 84 - eased * 84,
+        letterSpacing: -0.18 + eased * 0.1,
       });
     };
 
@@ -53,10 +54,10 @@ export function ContactSection() {
       <div className="pointer-events-none absolute right-[12%] top-20 h-36 w-36 rounded-full bg-tealBrand-500/10 blur-3xl" />
 
       <div className="relative border-t border-tealBrand-500/18 pt-10">
-        <div className="mx-auto max-w-4xl">
-          <div className="mt-4 flex items-center justify-center gap-6 text-sm font-semibold uppercase tracking-[0.14em] text-ink-800 md:gap-8 md:text-base">
+        <Reveal className="mx-auto max-w-4xl">
+          <div className="mt-4 flex items-center justify-center gap-6 text-sm font-semibold uppercase tracking-[0.14em] text-mist-100 md:gap-8 md:text-base">
             <a
-              href="https://linkedin.com"
+              href="https://www.linkedin.com/in/o%C4%9Fuz-%C3%B6ks%C3%BCz%C3%B6mer-020780242/"
               target="_blank"
               rel="noreferrer"
               className="inline-flex items-center gap-3 transition hover:text-tealBrand-600"
@@ -65,7 +66,7 @@ export function ContactSection() {
               LinkedIn
             </a>
             <a
-              href="https://github.com"
+              href="https://github.com/ouzoks"
               target="_blank"
               rel="noreferrer"
               className="inline-flex items-center gap-3 transition hover:text-tealBrand-600"
@@ -74,22 +75,22 @@ export function ContactSection() {
               GitHub
             </a>
           </div>
-          <div className="mt-4 text-center text-sm font-semibold uppercase tracking-[0.14em] text-ink-800 md:text-base">
+          <div className="mt-4 text-center text-sm font-semibold uppercase tracking-[0.14em] text-mist-100 md:text-base">
             <a
-              href="mailto:mail@example.com"
+              href="mailto:ouzoks2@gmail.com"
               className="transition hover:text-tealBrand-600"
             >
-              mail@example.com
+              ouzoks2@gmail.com
             </a>
           </div>
 
-          <p className="mx-auto mt-8 max-w-2xl text-center text-sm leading-7 text-ink-700/80 md:text-base">
+          <p className="mx-auto mt-8 max-w-2xl text-center text-sm leading-7 text-mist-300 md:text-base">
             Yeni bir urun, arayuz iyilestirmesi ya da frontend odakli bir gelistirme sureci icin
             iletisime gecebilirsin.
           </p>
-        </div>
+        </Reveal>
 
-        <div className="mt-14 overflow-hidden text-center md:mt-16">
+        <Reveal className="mt-14 overflow-hidden text-center md:mt-16" delayMs={120}>
           <h2
             id="contact-heading"
             className="contact-word font-serif text-[clamp(4.5rem,18vw,12rem)] font-semibold uppercase leading-[0.82] tracking-[-0.065em] text-tealBrand-600"
@@ -98,9 +99,9 @@ export function ContactSection() {
               letterSpacing: `${motion.letterSpacing}em`,
             }}
           >
-            CONTACT
+            İLETİŞİM
           </h2>
-        </div>
+        </Reveal>
       </div>
     </section>
   );

@@ -27,14 +27,14 @@ export function AboutCapabilityCard({ capability, className, delayMs = 0 }: Abou
   return (
     <article
       className={cn(
-        "about-reveal group relative min-h-[20rem] overflow-hidden rounded-[2rem] border border-tealBrand-500/35 bg-white p-6 shadow-[0_22px_50px_-30px_rgba(17,17,17,0.22)] transition duration-500 hover:-translate-y-1.5 hover:border-tealBrand-500 hover:shadow-[0_28px_64px_-30px_rgba(16,185,129,0.28)] border-opacity-100 md:min-h-[22rem] md:p-8 xl:min-h-[23rem]",
+        "about-reveal group relative min-h-[20rem] overflow-hidden rounded-[2rem] border border-white/10 bg-[linear-gradient(180deg,rgba(18,30,28,0.96),rgba(10,19,17,0.94))] p-6 shadow-[0_24px_48px_-30px_rgba(0,0,0,0.58)] transition duration-500 hover:-translate-y-1.5 hover:border-tealBrand-500/45 hover:shadow-[0_28px_64px_-30px_rgba(99,245,198,0.2)] border-opacity-100 md:min-h-[22rem] md:p-8 xl:min-h-[23rem]",
         className,
       )}
       style={{ animationDelay: `${delayMs}ms` }}
     >
       <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(120deg,rgba(255,255,255,0.02),transparent_45%,rgba(34,197,94,0.03))]" />
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_bottom_right,rgba(34,197,94,0.22),transparent_30%)] opacity-0 transition-opacity duration-500 ease-out group-hover:opacity-100" />
-      <div className="pointer-events-none absolute right-6 top-2 text-[7rem] font-bold leading-none tracking-[-0.08em] text-ink-900/10 transition-colors duration-500 ease-out group-hover:text-tealBrand-500/30 md:right-8 md:text-[9rem]">
+      <div className="pointer-events-none absolute right-6 top-2 text-[7rem] font-bold leading-none tracking-[-0.08em] text-white/5 transition-all duration-500 ease-out group-hover:text-tealBrand-500/30 group-hover:drop-shadow-[0_0_26px_rgba(99,245,198,0.2)] md:right-8 md:text-[9rem]">
         {capability.number}
       </div>
 
@@ -42,12 +42,12 @@ export function AboutCapabilityCard({ capability, className, delayMs = 0 }: Abou
         <span className="text-sm font-bold tracking-[0.18em] text-tealBrand-600">
           {capability.number}
         </span>
-        <h3 className="mt-8 max-w-[14ch] text-3xl leading-[1.05] tracking-tight text-ink-900 md:text-[3rem]">
+        <h3 className="mt-8 max-w-[14ch] text-3xl leading-[1.05] tracking-tight text-mist-50 md:text-[3rem]">
           {capability.title}
         </h3>
 
         <div className="mt-auto pt-14">
-          <p className="max-w-[32rem] text-base leading-8 text-ink-700 md:text-[1.05rem]">
+          <p className="max-w-[32rem] text-base leading-8 text-mist-300 md:text-[1.05rem]">
             {renderHighlightedText(capability.description)}
           </p>
 
