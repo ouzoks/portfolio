@@ -1,7 +1,8 @@
-import type { AboutCapability, CapabilitySentence, Experience, NavItem, Project, SkillCategory } from "../types";
+import type { AboutCapability, CapabilitySentence, Education, Experience, NavItem, Project, SkillCategory } from "../types";
 import rusturkproject from "../assets/rusturkproject.png";
 import fitnesstaskproject from "../assets/fitnesstaskproject.png";
 import mumakproject from "../assets/mumakproject.png";
+import isiklogo from "../assets/isiklogo.png";
 
 export const navItems: NavItem[] = [
   { label: "Hakkimda", href: "#about" },
@@ -228,3 +229,10 @@ export const experiences: Experience[] = [
       "Kendi projelerim ve farkli urun fikirleri uzerinden frontend gelistirme, UI dusuncesi, API entegrasyonu ve urun deneyimi tarafinda kendimi gelistirmeye devam ediyorum. Bu surecte gercek senaryolar uzerinde calisarak hem teknik hem de urun odakli bakisimi derinlestiriyorum.",
   },
 ];
+
+export const education: Education = {
+  school: "Isik Universitesi",
+  period: "2020 - 2025",
+  degree: "Yazilim Muhendisligi",
+  logoSrc: isiklogo,
+};

@@ -90,3 +90,10 @@ export type Experience = {
   employmentType: string;
   description: string;
 };
+
+export type Education = {
+  school: string;
+  period: string;
+  degree: string;
+  logoSrc?: string;
+};

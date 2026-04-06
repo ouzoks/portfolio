@@ -83,6 +83,11 @@
     background: linear-gradient(180deg, rgba(22, 163, 74, 0.95), rgba(21, 128, 61, 0.85));
     background-clip: padding-box;
   }
+
+  .contact-word {
+    transform-origin: center bottom;
+    will-change: transform, letter-spacing;
+  }
 }
 
 @keyframes aboutReveal {
