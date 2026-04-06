@@ -28,7 +28,7 @@ export function HeroSection() {
           type="button"
           onClick={() => setShowBioCard((prev) => !prev)}
           className={`group relative z-20 cursor-pointer rounded-full border-4 border-white p-2 shadow-xl transition-transform duration-1000 ease-out ${
-            showBioCard ? "translate-x-0 md:-translate-x-[25rem]" : "translate-x-0"
+            showBioCard ? "translate-x-0 lg:-translate-x-[25rem]" : "translate-x-0"
           }`}
           aria-expanded={showBioCard}
           aria-controls="hero-bio-card"
@@ -44,10 +44,10 @@ export function HeroSection() {
 
         <article
           id="hero-bio-card"
-          className={`pointer-events-none absolute left-1/2 top-1/2 z-30 w-[min(94vw,700px)] -translate-y-1/2 rounded-[1.75rem] border border-white/10 bg-[linear-gradient(180deg,rgba(18,30,28,0.96),rgba(10,19,17,0.94))] p-5 text-left shadow-[0_24px_54px_-28px_rgba(0,0,0,0.62)] backdrop-blur-xl transition-all duration-1000 ease-out md:p-8 ${
+          className={`pointer-events-none absolute left-1/2 top-1/2 z-30 w-[min(94vw,700px)] -translate-y-1/2 rounded-[1.75rem] border border-white/10 bg-[linear-gradient(180deg,rgba(18,30,28,0.88),rgba(10,19,17,0.82))] p-5 text-left shadow-[0_24px_54px_-28px_rgba(0,0,0,0.62)] backdrop-blur-xl transition-all duration-1000 ease-out md:p-8 ${
             showBioCard
-              ? "-translate-x-1/2 md:-translate-x-[20%] scale-100 opacity-100"
-              : "-translate-x-1/2 md:-translate-x-[20%] scale-95 opacity-0"
+              ? "-translate-x-1/2 lg:-translate-x-[20%] scale-100 opacity-100"
+              : "-translate-x-1/2 lg:-translate-x-[20%] scale-95 opacity-0"
           }`}
         >
           <p className="leading-relaxed text-lg text-mist-300">
