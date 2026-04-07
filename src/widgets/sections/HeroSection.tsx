@@ -5,7 +5,7 @@ import { Reveal } from "../../shared/ui/Reveal";
 
 export function HeroSection() {
   const [showBioCard, setShowBioCard] = useState(false);
-  const text = "OGUZ OKSUZOMER";
+  const text = "OĞUZ ÖKSÜZÖMER";
 
   return (
     <section id="home" className="relative flex min-h-screen items-center justify-center overflow-hidden">
@@ -24,22 +24,22 @@ export function HeroSection() {
 
       <div className="relative z-10 flex w-full items-center justify-center px-4">
         <Reveal delayMs={80} yOffset={18}>
-        <button
-          type="button"
-          onClick={() => setShowBioCard((prev) => !prev)}
-          className={`group relative z-20 cursor-pointer rounded-full border-4 border-white p-2 shadow-xl transition-transform duration-1000 ease-out ${
-            showBioCard ? "translate-x-0 lg:-translate-x-[25rem]" : "translate-x-0"
-          }`}
-          aria-expanded={showBioCard}
-          aria-controls="hero-bio-card"
-          aria-label="Profil detaylarini ac"
-        >
-          <PhotoPlaceholder
-            label="profile-picture"
-            src={profilePicture}
-            className="h-72 w-72 rounded-full object-cover transition duration-300 group-hover:scale-[1.03] group-hover:ring-8 group-hover:ring-tealBrand-500/60 group-hover:shadow-[0_0_0_14px_rgba(99,245,198,0.28)] md:h-80 md:w-80"
-          />
-        </button>
+          <button
+            type="button"
+            onClick={() => setShowBioCard((prev) => !prev)}
+            className={`group relative z-20 cursor-pointer rounded-full border-4 border-white p-2 shadow-xl transition-transform duration-1000 ease-out ${
+              showBioCard ? "translate-x-0 lg:-translate-x-[25rem]" : "translate-x-0"
+            }`}
+            aria-expanded={showBioCard}
+            aria-controls="hero-bio-card"
+            aria-label="Profil detaylarını aç"
+          >
+            <PhotoPlaceholder
+              label="profile-picture"
+              src={profilePicture}
+              className="h-72 w-72 rounded-full object-cover transition duration-300 group-hover:scale-[1.03] group-hover:ring-8 group-hover:ring-tealBrand-500/60 group-hover:shadow-[0_0_0_14px_rgba(99,245,198,0.28)] md:h-80 md:w-80"
+            />
+          </button>
         </Reveal>
 
         <article
@@ -51,32 +51,32 @@ export function HeroSection() {
           }`}
         >
           <p className="leading-relaxed text-lg text-mist-300">
-            Merhaba, web siteme hos geldiniz.
+            Merhaba, web siteme hoş geldiniz.
             <br />
             <br />
-            Kisaca yaptigim isi anlatacak olursam,
-            <span className="font-semibold text-mist-50"> karmasik fikirleri </span>
+            Kısaca yaptığım işi anlatacak olursam,
+            <span className="font-semibold text-mist-50"> karmaşık fikirleri </span>
             daha
-            <span className="font-semibold text-tealBrand-500"> sade ve anlasilir ciktilara </span>
-            donusturur,
-            <span className="font-semibold text-mist-50"> kullanici senaryolarini </span>
+            <span className="font-semibold text-tealBrand-500"> sade ve anlaşılır çıktılara </span>
+            dönüştürür,
+            <span className="font-semibold text-mist-50"> kullanıcı senaryolarını </span>
             uygulanabilir hale getiririm.
             <br />
             <br />
-            Amacim, kullanicilarin
-            <span className="font-semibold text-tealBrand-500"> akista kaybolmadan </span>
-            ilerleyebilecegi,
-            <span className="font-semibold text-mist-50"> iyi dusunulmus </span>
+            Amacım, kullanıcıların
+            <span className="font-semibold text-tealBrand-500"> akışta kaybolmadan </span>
+            ilerleyebileceği,
+            <span className="font-semibold text-mist-50"> iyi düşünülmüş </span>
             ve
-            <span className="font-semibold text-tealBrand-500"> surdurulebilir </span>
-            arayuzler ve fonksiyonlar olusturmaktir.
+            <span className="font-semibold text-tealBrand-500"> sürdürülebilir </span>
+            arayüzler ve fonksiyonlar oluşturmaktır.
           </p>
         </article>
       </div>
 
       <Reveal className="absolute bottom-6 left-5 z-10" delayMs={420} yOffset={16}>
         <p className="text-[11px] font-semibold uppercase tracking-[0.14em] text-mist-200/80 md:text-xs">
-          Istanbul, Turkiye
+          İstanbul, Türkiye
         </p>
       </Reveal>
       <Reveal className="absolute bottom-6 right-5 z-10" delayMs={480} yOffset={16}>

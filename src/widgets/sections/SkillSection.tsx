@@ -8,22 +8,23 @@ export function SkillSection() {
     <section id="skills" className="shell py-14 md:py-20" aria-labelledby="skills-heading">
       <Reveal>
         <header className="grid gap-8 border-t border-tealBrand-500/22 pt-6 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
-        <div className="max-w-xl">
-          <p className="section-eyebrow">Skills & Technologies</p>
-          <h2
-            id="skills-heading"
-            className="mt-4 font-serif text-4xl leading-[1.02] tracking-tight text-mist-50 md:text-5xl lg:text-6xl"
-          >
-            Teknolojiler, araçlar ve çalışma pratiğim
-          </h2>
-        </div>
+          <div className="max-w-xl">
+            <p className="section-eyebrow">YETENEKLER VE TEKNOLOJİLER</p>
+            <h2
+              id="skills-heading"
+              className="mt-4 font-serif text-4xl leading-[1.02] tracking-tight text-mist-50 md:text-5xl lg:text-6xl"
+            >
+              Teknolojiler, araçlar ve çalışma pratiğim
+            </h2>
+          </div>
 
-        <div className="max-w-2xl lg:pt-2">
-          <p className="mt-7 text-base leading-8 text-mist-300 md:text-lg">
-            Günlük üretim sürecimde aktif olarak kullandığım teknolojileri ve geliştirme yaklaşımımı bu alanda bir araya getirdim.
-Amacım sadece hangi araçları kullandığımı değil, ürün geliştirirken nasıl düşündüğümü de sade bir dille göstermek.
-          </p>
-        </div>
+          <div className="max-w-2xl lg:pt-2">
+            <p className="mt-7 text-base leading-8 text-mist-300 md:text-lg">
+              Günlük üretim sürecimde aktif olarak kullandığım teknolojileri ve geliştirme yaklaşımımı
+              bu alanda bir araya getirdim. Amacım sadece hangi araçları kullandığımı değil, ürün
+              geliştirirken nasıl düşündüğümü de sade bir dille göstermek.
+            </p>
+          </div>
         </header>
       </Reveal>
 
@@ -31,7 +32,7 @@ Amacım sadece hangi araçları kullandığımı değil, ürün geliştirirken n
         <Reveal className="xl:pr-8" delayMs={80}>
           <div className="themed-scrollbar xl:sticky xl:top-20 xl:max-h-[calc(100svh-5rem)] xl:overflow-y-auto xl:pr-3">
             <p className="text-[11px] font-bold uppercase tracking-[0.18em] text-tealBrand-600">
-              Core Stack
+              Ana Yetkinlikler
             </p>
             <div className="mt-6 space-y-8">
               {skillCategories.map((category) => (
@@ -50,20 +51,20 @@ Amacım sadece hangi araçları kullandığımı değil, ürün geliştirirken n
 
         <Reveal delayMs={160}>
           <div>
-          <div className="max-w-2xl">
-            <p className="text-[11px] font-bold uppercase tracking-[0.18em] text-tealBrand-600">
-              Capability Notes
-            </p>
-            <h4 className="mt-4 font-serif text-3xl leading-tight text-mist-50 md:text-4xl">
-             Nasıl çalıştığımı anlatan küçük detaylar
-            </h4>
-          </div>
+            <div className="max-w-2xl">
+              <p className="text-[11px] font-bold uppercase tracking-[0.18em] text-tealBrand-600">
+                Çalışma Notları
+              </p>
+              <h4 className="mt-4 font-serif text-3xl leading-tight text-mist-50 md:text-4xl">
+                Nasıl çalıştığımı anlatan küçük detaylar
+              </h4>
+            </div>
 
-          <div className="mt-8 grid gap-6 lg:grid-cols-2 lg:gap-x-6 lg:gap-y-6">
-            {capabilitySentences.map((sentence) => (
-              <CapabilitySentenceItem key={sentence.number} sentence={sentence} />
-            ))}
-          </div>
+            <div className="mt-8 grid gap-6 lg:grid-cols-2 lg:gap-x-6 lg:gap-y-6">
+              {capabilitySentences.map((sentence) => (
+                <CapabilitySentenceItem key={sentence.number} sentence={sentence} />
+              ))}
+            </div>
           </div>
         </Reveal>
       </div>

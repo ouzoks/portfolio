@@ -6,8 +6,8 @@ export function ProjectsSection() {
   return (
     <section id="projects" className="shell py-20">
       <Reveal>
-        <p className="section-eyebrow">Selected Work</p>
-        <h2 className="my-10 section-title text-center">One cikan projeler</h2>
+        <p className="section-eyebrow">ÖNE ÇIKAN PROJELER</p>
+        <h2 className="my-10 text-center section-title">Seçili projeler</h2>
       </Reveal>
       <div className="mt-10 space-y-12">
         {projects.map((project, index) => (

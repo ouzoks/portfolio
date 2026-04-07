@@ -5,11 +5,10 @@ import { Reveal } from "../../shared/ui/Reveal";
 export function ExperiencesSection() {
   return (
     <section id="experience" className="shell py-20">
-
       <Reveal>
-        <p className="section-eyebrow">Experience</p>
+        <p className="section-eyebrow">DENEYİM</p>
         <div className="mx-auto max-w-3xl text-center">
-          <h2 className="section-title">Calisma yolculugum</h2>
+          <h2 className="section-title">Çalışma yolculuğum</h2>
         </div>
       </Reveal>
 

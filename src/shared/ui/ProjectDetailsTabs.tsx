@@ -57,10 +57,7 @@ export function ProjectDetailsTabs({ project }: ProjectDetailsTabsProps) {
     <div className="mt-6">
       <div className="flex flex-wrap gap-3">
         {project.technologies.map((technology) => (
-          <SkillTag
-            key={`${project.number}-${technology.icon}-${technology.label}`}
-            tag={technology}
-          />
+          <SkillTag key={`${project.number}-${technology.icon}-${technology.label}`} tag={technology} />
         ))}
       </div>
 
@@ -98,7 +95,7 @@ export function ProjectDetailsTabs({ project }: ProjectDetailsTabsProps) {
                   : "text-mist-300 hover:text-tealBrand-500"
               }`}
             >
-              Overview
+              Genel Bakış
             </button>
             <button
               type="button"
@@ -109,7 +106,7 @@ export function ProjectDetailsTabs({ project }: ProjectDetailsTabsProps) {
                   : "text-mist-300 hover:text-tealBrand-500"
               }`}
             >
-              Implementation
+              Uygulama
             </button>
           </div>
         </div>

@@ -1,15 +1,24 @@
-import type { AboutCapability, CapabilitySentence, Education, Experience, NavItem, Project, SkillCategory } from "../types";
-import rusturkproject from "../assets/rusturkproject.png";
+import type {
+  AboutCapability,
+  CapabilitySentence,
+  Education,
+  Experience,
+  NavItem,
+  Project,
+  SkillCategory,
+} from "../types";
 import fitnesstaskproject from "../assets/fitnesstaskproject.png";
-import mumakproject from "../assets/mumakproject.png";
 import isiklogo from "../assets/isiklogo.png";
+// import mumakproject from "../assets/mumakproject.png";
+import portfolio from "../assets/portfolio.png"
+import rusturkproject from "../assets/rusturkproject.png";
 
 export const navItems: NavItem[] = [
   { label: "Ne Yapıyorum", href: "#about" },
   { label: "Nasıl Yapıyorum", href: "#skills" },
   { label: "Projeler", href: "#projects" },
   { label: "Deneyim", href: "#experience" },
-  { label: "Iletisim", href: "#contact" },
+  { label: "İletişim", href: "#contact" },
 ];
 
 export const projects: Project[] = [
@@ -22,11 +31,11 @@ export const projects: Project[] = [
       { icon: "react", label: "React" },
       { icon: "materialui", label: "Material UI" },
       { icon: "dotnet_core", label: ".NET Core" },
-      { icon: "mssql", label: "MSSQL"},
+      { icon: "mssql", label: "MSSQL" },
     ],
     repoUrl: "https://github.com/your-username/portfolio-cms-dashboard",
     liveDemoUrl: "https://portfolio-cms-demo.example.com",
-    imageLabel: "Portfolio CMS dashboard preview",
+    imageLabel: "Rus&Turk Club önizlemesi",
     imageSrc: rusturkproject,
     overview: {
       problem:
@@ -36,59 +45,56 @@ export const projects: Project[] = [
     },
     implementation: {
       architecture:
-        "React ve Material UI ile modüler bir arayüz geliştirirken, .NET Core ve MSSQL ile kullanıcı yönetimi ve veri akışlarını yöneten; kimlik doğrulama, rol bazlı erişim ve API entegrasyonlarıyla güvenli ve ölçeklenebilir bir sistem kurdum.",
+        "React ve Material UI ile modüler bir arayüz geliştirirken, .NET Core ve MSSQL ile kullanıcı yönetimi ve veri akışlarını yöneten; kimlik doğrulama, rol bazlı erişim ve API entegrasyonlarıyla güvenli ve ölçeklenebilir bir sistem kuruldu.",
     },
   },
   {
     number: "02",
-    title: "E-Commerce Storefront",
+    title: "Fitness Task Tracking System",
     summary:
-      "Mobil odakli urun kesfi ve satin alma akislarini hizlandiran modern storefront arayuzu.",
+      "Antrenör ve öğrenciler arasında görev yönetimi, kalori takibi ve ilerleme analizini tek bir platformda birleştiren, rol bazlı yapı ve gerçek zamanlı veri akışıyla tasarlanmış bir fitness takip sistemi.",
     technologies: [
       { icon: "react", label: "React" },
-      { icon: "javascript", label: "JavaScript" },
-      { icon: "tailwind", label: "Tailwind CSS" },
-      { icon: "responsive_ui", label: "Responsive UI" },
-      { icon: "interaction", label: "Interaction" },
+      { icon: "materialui", label: "Material UI" },
+      { icon: "dotnet_core", label: ".NET Core" },
+      { icon: "mssql", label: "MSSQL" },
     ],
     repoUrl: "https://github.com/your-username/ecommerce-storefront",
-    imageLabel: "E-commerce storefront preview",
+    imageLabel: "E-ticaret storefront önizlemesi",
     imageSrc: fitnesstaskproject,
     overview: {
       problem:
-        "Kullanici urunleri gezerken filtreleme, listeleme ve sepete ekleme akislarinin hiz kaybetmeden ilerlemesi gerekiyordu.",
+        "Kullanıcıların antrenman süreçlerini takip ederken görevlerini yönetmesi, kalori verilerini doğru şekilde izleyebilmesi ve gelişimini kesintisiz gözlemleyebilmesi gerekiyordu.",
       solution:
-        "Kategori gecisleri, filtre paneli ve urun kartlarinin etkilesimini sade bir bilgi mimarisiyle yeniden duzenledim. Kullanici urunler arasinda daha rahat gezebildi ve satin alma akisinda gereksiz adim hissi azaldi.",
+        "Haftalık program ve kalori hesaplama sistemlerini tek bir yapı altında birleştirerek akışı sadeleştirdim. Kullanıcılara özel arayüzler sayesinde deneyim kişiselleştirildi ve ilerleme takibi verimli hale geldi.",
     },
     implementation: {
       architecture:
-        "Listeleme, filtreleme ve kart alanlarini birbirinden bagimsiz ama ayni tasarim dilinde calisan yapilar olarak ayirdim. Arayuz durumlarini filtre degisimleriyle birlikte kontrollu yonetip, veri akisinin kullanicida kopukluk hissi yaratmamasina odaklandim.",
+        "Görev, kalori takibi ve rollere özel layout yapısını modüler bir mimariyle kurguladım. Admin panelinde log ve kullanıcı hareketlerini izlenebilir hale getirerek sistem kontrolünü güçlendirdim ve genel akışı verimli bir yapıda yönettim.",
     },
   },
   {
     number: "03",
-    title: "Booking & Reservation Platform",
+    title: "Portfolyo Web Sitesi",
     summary:
-      "Rezervasyon surecini daha okunur ve guvenilir hale getiren takvim tabanli urun deneyimi.",
+      "Projelerimi, deneyimlerimi ve teknik becerilerimi modern bir arayüz ve etkileşimli bileşenlerle sunan, performans ve kullanıcı deneyimi odaklı geliştirilen kişisel portfolyo web sitesi.",
     technologies: [
       { icon: "react", label: "React" },
       { icon: "typescript", label: "TypeScript" },
-      { icon: "rest_api", label: "REST API" },
-      { icon: "materialui", label: "Material UI" },
-      { icon: "data_fetching", label: "Data Fetching" },
+      { icon: "tailwind", label: "Tailwind CSS" },
     ],
     repoUrl: "https://github.com/your-username/booking-platform",
-    imageLabel: "Booking platform preview",
-    imageSrc: mumakproject,
+    imageLabel: "Rezervasyon platformu önizlemesi",
+    imageSrc: portfolio,
     overview: {
       problem:
-        "Rezervasyon akislarinda tarih secimi, durum bilgisi ve form adimlari kullanici icin kolayca karmasik hale gelebiliyordu.",
+        "Kişisel projelerimi ve teknik yeteneklerimi sade, hızlı ve dikkat dağıtmayan bir arayüzle sunabileceğim bir yapı oluşturmam gerekiyordu.",
       solution:
-        "Takvim odakli akisi sadeleştirip kritik durum mesajlarini ve form gecislerini daha net bir sira icinde yeniden kurguladim. Kullanici bir rezervasyonun hangi asamada oldugunu daha rahat anlayabildi ve akis icinde kaybolma riski azaldi.",
+        "Bileşen bazlı bir yapı kurarak proje sunumlarını, zaman çizelgesini ve iletişim alanlarını tek bir sistem altında topladım. Böylece kullanıcılar içeriklere hızlı ulaşabilirken site genelinde tutarlı bir deneyim elde edildi.",
     },
     implementation: {
       architecture:
-        "Takvim, detay paneli ve form bolumlerini birbirinden ayrilan ama ayni veri modeline baglanan moduller olarak duzenledim. Veri durumlarini secili tarih ve rezervasyon detayina gore yoneterek, degisen ekran parcalarinin daha kontrollu calismasini sagladim.",
+        "Responsive tasarım, animasyonlar ve bileşenleri modüler bir yapıda geliştirerek performans ve kullanıcı deneyimini dengeledim. Yapı itibarı ile temiz ve yeniden kullanılabilir değişkenler kullanarak verimi sağladım.",
     },
   },
 ];
@@ -98,25 +104,25 @@ export const aboutCapabilities: AboutCapability[] = [
     number: "01",
     title: "Frontend Development",
     description:
-      "Kullanicilarin rahatca ilerleyebilecegi **modern** ve **olceklenebilir** arayuzler gelistiriyorum. Odagim, deneyimin **sade**, **hizli** ve **anlasilir** olmasi.",
+      "Kullanıcıların rahatça ilerleyebileceği **modern** ve **ölçeklenebilir** arayüzler geliştiriyorum. Odağım, deneyimin **sade**, **hızlı** ve **anlaşılır** olması.",
   },
   {
     number: "02",
     title: "User Experience & Interface Design",
     description:
-      "Arayuzlerde sadece gorsel duzeni degil, kullanicinin akista nasil hissettigini de dusunuyorum. Hedefim, **net**, **erisilebilir** ve **yonlendirici** ekranlar tasarlamak.",
+      "Arayüzlerde sadece görsel düzeni değil, kullanıcının akışta nasıl hissettiğini de düşünüyorum. Hedefim, **net**, **erişilebilir** ve **yönlendirici** ekranlar tasarlamak.",
   },
   {
     number: "03",
     title: "API & Backend Integration",
     description:
-      "Arayuz ile arka plandaki servislerin sorunsuz iletisim kurmasini sagliyorum. Veri akisinin **guvenilir** olmasi, hata durumlarinin **dogru yonetilmesi** ve kimlik dogrulama surecleri bu alanin **kritik parcalari**.",
+      "Arayüz ile arka plandaki servislerin sorunsuz iletişim kurmasını sağlıyorum. Veri akışının **güvenilir** olması, hata durumlarının **doğru yönetilmesi** ve kimlik doğrulama süreçleri bu alanın **kritik parçaları**.",
   },
   {
     number: "04",
     title: "Architecture & Product Thinking",
     description:
-      "Urunlerin buyudukce dagilmayan, **surdurulebilir** bir yapiya sahip olmasi icin mimari odakli calisiyorum. **Hizli gelistirme** ile uzun vadede **bakim kolayligi** arasinda dogru dengeyi kurmaya calisiyorum.",
+      "Ürünlerin büyüdükçe dağılmayan, **sürdürülebilir** bir yapıya sahip olması için mimari odaklı çalışıyorum. **Hızlı geliştirme** ile uzun vadede **bakım kolaylığı** arasında doğru dengeyi kurmaya çalışıyorum.",
   },
 ];
 
@@ -193,47 +199,46 @@ export const capabilitySentences: CapabilitySentence[] = [
       { icon: "frontend_backend", label: "Frontend-Backend Communication" },
     ],
   },
-
 ];
 
 export const experiences: Experience[] = [
   {
-    period: "May 2023 - Tem 2023",
-    role: "Yazilim Muhendisi",
-    company: "F8 Bilisim ve Danismanlik Hizmetleri",
-    employmentType: "Yari zamanli",
+    period: "Mayıs 2023 - Temmuz 2023",
+    role: "Yazılım Mühendisi",
+    company: "F8 Bilişim ve Danışmanlık Hizmetleri",
+    employmentType: "Yarı zamanlı",
     description:
-      "PL/SQL tarafinda sorgu, prosedur ve raporlama akislarina odaklandim. IFS ERP platformunda ihtiyaca ozel gelistirmeler yaparak veri odakli sureclerin daha kontrollu ve izlenebilir ilerlemesine katkida bulundum.",
+      "PL/SQL tarafında sorgu, prosedür ve raporlama akışlarına odaklandım. IFS ERP platformunda ihtiyaca özel geliştirmeler yaparak veri odaklı süreçlerin daha kontrollü ve izlenebilir ilerlemesine katkıda bulundum.",
   },
   {
-    period: "Eyl 2024",
-    role: "Yazilim Stajyeri",
-    company: "F8 Bilisim ve Danismanlik Hizmetleri",
-    employmentType: "Tam zamanli",
+    period: "Eylül 2024",
+    role: "Yazılım Stajyeri",
+    company: "F8 Bilişim ve Danışmanlık Hizmetleri",
+    employmentType: "Tam zamanlı",
     description:
-      "Dell Boomi platformu ile sistemler arasi entegrasyon akislarini inceleyip uygulama sureclerine destek oldum. Teknik dokumantasyonlari okunabilir hale getirme ve bu entegrasyonlari sunum formatinda anlatma tarafinda da deneyim kazandim.",
+      "Dell Boomi platformu ile sistemler arası entegrasyon akışlarını inceleyip uygulama süreçlerine destek oldum. Teknik dokümantasyonları okunabilir hale getirme ve bu entegrasyonları sunum formatında anlatma tarafında da deneyim kazandım.",
   },
   {
-    period: "Eyl 2025",
-    role: "Yazilim Stajyeri",
-    company: "BNTPRO Bilgi ve Iletisim Hizmetleri A.S.",
-    employmentType: "Tam zamanli",
+    period: "Eylül 2025",
+    role: "Yazılım Stajyeri",
+    company: "BNTPRO Bilgi ve İletişim Hizmetleri A.Ş.",
+    employmentType: "Tam zamanlı",
     description:
-      "Linux sistemleri uzerinde RHEL ve CentOS yonetimi, temel guvenlik yapilandirmalari ve sunucu operasyonlariyla ilgilendim. Ayni zamanda PHP Laravel ile MVC mimarisinde uygulama gelistirme, 2FA, rol bazli yetkilendirme ve guvenlik modulleri uzerinde calistim.",
+      "Linux sistemleri üzerinde RHEL ve CentOS yönetimi, temel güvenlik yapılandırmaları ve sunucu operasyonlarıyla ilgilendim. Aynı zamanda PHP Laravel ile MVC mimarisinde uygulama geliştirme, 2FA, rol bazlı yetkilendirme ve güvenlik modülleri üzerinde çalıştım.",
   },
   {
-    period: "2025 - Bugun",
+    period: "2026 - Bugün",
     role: "Freelance Frontend Developer",
-    company: "Independent Product Work",
+    company: "Bağımsız Çalışma",
     employmentType: "Freelance",
     description:
-      "Kendi projelerim ve farkli urun fikirleri uzerinden frontend gelistirme, UI dusuncesi, API entegrasyonu ve urun deneyimi tarafinda kendimi gelistirmeye devam ediyorum. Bu surecte gercek senaryolar uzerinde calisarak hem teknik hem de urun odakli bakisimi derinlestiriyorum.",
+      "Kendi projelerim ve farklı ürün fikirleri üzerinden frontend geliştirme, UI düşüncesi, API entegrasyonu ve ürün deneyimi tarafında kendimi geliştirmeye devam ediyorum. Bu süreçte gerçek senaryolar üzerinde çalışarak hem teknik hem de ürün odaklı bakışımı derinleştiriyorum.",
   },
 ];
 
 export const education: Education = {
-  school: "Isik Universitesi",
+  school: "Işık Üniversitesi",
   period: "2020 - 2025",
-  degree: "Yazilim Muhendisligi",
+  degree: "Yazılım Mühendisliği",
   logoSrc: isiklogo,
 };

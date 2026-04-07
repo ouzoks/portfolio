@@ -76,17 +76,13 @@ export function ContactSection() {
             </a>
           </div>
           <div className="mt-4 text-center text-sm font-semibold uppercase tracking-[0.14em] text-mist-100 md:text-base">
-            <a
-              href="mailto:ouzoks2@gmail.com"
-              className="transition hover:text-tealBrand-600"
-            >
+            <a href="mailto:ouzoks2@gmail.com" className="transition hover:text-tealBrand-600">
               ouzoks2@gmail.com
             </a>
           </div>
 
           <p className="mx-auto mt-8 max-w-2xl text-center text-sm leading-7 text-mist-300 md:text-base">
-            Yeni bir urun, arayuz iyilestirmesi ya da frontend odakli bir gelistirme sureci icin
-            iletisime gecebilirsin.
+           Yeni ürünler geliştirmek, mevcut arayüzleri iyileştirmek ve kullanıcı deneyimini ileri taşımak için frontend odaklı projelerde birlikte çalışabiliriz.
           </p>
         </Reveal>
 
