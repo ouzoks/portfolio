@@ -1,11 +1,13 @@
 import { useState } from "react";
+import { useI18n } from "../../shared/i18n/I18nProvider";
 import profilePicture from "../../shared/assets/profile-picture.png";
 import { PhotoPlaceholder } from "../../shared/ui/PhotoPlaceholder";
 import { Reveal } from "../../shared/ui/Reveal";
 
 export function HeroSection() {
   const [showBioCard, setShowBioCard] = useState(false);
-  const text = "OĞUZ ÖKSÜZÖMER";
+  const { t } = useI18n();
+  const text = t("hero.name");
 
   return (
     <section id="home" className="relative flex min-h-screen items-center justify-center overflow-hidden">
@@ -28,11 +30,11 @@ export function HeroSection() {
             type="button"
             onClick={() => setShowBioCard((prev) => !prev)}
             className={`group relative z-20 cursor-pointer rounded-full border-4 border-white p-2 shadow-xl transition-transform duration-1000 ease-out ${
-              showBioCard ? "translate-x-0 lg:-translate-x-[25rem]" : "translate-x-0"
+              showBioCard ? "translate-x-0 min-[1181px]:-translate-x-[25rem]" : "translate-x-0"
             }`}
             aria-expanded={showBioCard}
             aria-controls="hero-bio-card"
-            aria-label="Profil detaylarını aç"
+            aria-label={t("hero.openProfile")}
           >
             <PhotoPlaceholder
               label="profile-picture"
@@ -46,42 +48,30 @@ export function HeroSection() {
           id="hero-bio-card"
           className={`pointer-events-none absolute left-1/2 top-1/2 z-30 w-[min(94vw,700px)] -translate-y-1/2 rounded-[1.75rem] border border-white/10 bg-[linear-gradient(180deg,rgba(18,30,28,0.88),rgba(10,19,17,0.82))] p-5 text-left shadow-[0_24px_54px_-28px_rgba(0,0,0,0.62)] backdrop-blur-xl transition-all duration-1000 ease-out md:p-8 ${
             showBioCard
-              ? "-translate-x-1/2 lg:-translate-x-[20%] scale-100 opacity-100"
-              : "-translate-x-1/2 lg:-translate-x-[20%] scale-95 opacity-0"
+              ? "-translate-x-1/2 min-[1181px]:-translate-x-[20%] scale-100 opacity-100"
+              : "-translate-x-1/2 min-[1181px]:-translate-x-[20%] scale-95 opacity-0"
           }`}
         >
           <p className="leading-relaxed text-lg text-mist-300">
-            Merhaba, web siteme hoş geldiniz.
+            {t("hero.intro")}
             <br />
             <br />
-            Kısaca yaptığım işi anlatacak olursam,
-            <span className="font-semibold text-mist-50"> karmaşık fikirleri </span>
-            daha
-            <span className="font-semibold text-tealBrand-500"> sade ve anlaşılır çıktılara </span>
-            dönüştürür,
-            <span className="font-semibold text-mist-50"> kullanıcı senaryolarını </span>
-            uygulanabilir hale getiririm.
+            {t("hero.summary")}
             <br />
             <br />
-            Amacım, kullanıcıların
-            <span className="font-semibold text-tealBrand-500"> akışta kaybolmadan </span>
-            ilerleyebileceği,
-            <span className="font-semibold text-mist-50"> iyi düşünülmüş </span>
-            ve
-            <span className="font-semibold text-tealBrand-500"> sürdürülebilir </span>
-            arayüzler ve fonksiyonlar oluşturmaktır.
+            {t("hero.purpose")}
           </p>
         </article>
       </div>
 
       <Reveal className="absolute bottom-6 left-5 z-10" delayMs={420} yOffset={16}>
         <p className="text-[11px] font-semibold uppercase tracking-[0.14em] text-mist-200/80 md:text-xs">
-          İstanbul, Türkiye
+          {t("hero.location")}
         </p>
       </Reveal>
       <Reveal className="absolute bottom-6 right-5 z-10" delayMs={480} yOffset={16}>
         <p className="max-w-[12ch] text-right text-xl font-extrabold uppercase leading-tight text-mist-50 md:text-4xl">
-          Junior Software Engineer
+          {t("hero.role")}
         </p>
       </Reveal>
     </section>

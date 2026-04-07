@@ -1,28 +1,34 @@
-import { capabilitySentences, skillCategories } from "../../shared/config/site";
+import { useI18n } from "../../shared/i18n/I18nProvider";
+import {
+  getCapabilitySentences,
+  getSkillCategories,
+} from "../../shared/config/site";
 import { CapabilitySentenceItem } from "../../shared/ui/CapabilitySentenceItem";
 import { Reveal } from "../../shared/ui/Reveal";
 import { SkillCategoryGroup } from "../../shared/ui/SkillCategoryGroup";
 
 export function SkillSection() {
+  const { dictionary, t } = useI18n();
+  const skillCategories = getSkillCategories(dictionary);
+  const capabilitySentences = getCapabilitySentences(dictionary);
+
   return (
     <section id="skills" className="shell py-14 md:py-20" aria-labelledby="skills-heading">
       <Reveal>
         <header className="grid gap-8 border-t border-tealBrand-500/22 pt-6 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
           <div className="max-w-xl">
-            <p className="section-eyebrow">YETENEKLER VE TEKNOLOJİLER</p>
+            <p className="section-eyebrow">{t("skills.eyebrow")}</p>
             <h2
               id="skills-heading"
               className="mt-4 font-serif text-4xl leading-[1.02] tracking-tight text-mist-50 md:text-5xl lg:text-6xl"
             >
-              Teknolojiler, araçlar ve çalışma pratiğim
+              {t("skills.title")}
             </h2>
           </div>
 
           <div className="max-w-2xl lg:pt-2">
             <p className="mt-7 text-base leading-8 text-mist-300 md:text-lg">
-              Günlük üretim sürecimde aktif olarak kullandığım teknolojileri ve geliştirme yaklaşımımı
-              bu alanda bir araya getirdim. Amacım sadece hangi araçları kullandığımı değil, ürün
-              geliştirirken nasıl düşündüğümü de sade bir dille göstermek.
+              {t("skills.description")}
             </p>
           </div>
         </header>
@@ -32,7 +38,7 @@ export function SkillSection() {
         <Reveal className="xl:pr-8" delayMs={80}>
           <div className="themed-scrollbar xl:sticky xl:top-20 xl:max-h-[calc(100svh-5rem)] xl:overflow-y-auto xl:pr-3">
             <p className="text-[11px] font-bold uppercase tracking-[0.18em] text-tealBrand-600">
-              Ana Yetkinlikler
+              {t("skills.coreStack")}
             </p>
             <div className="mt-6 space-y-8">
               {skillCategories.map((category) => (
@@ -53,10 +59,10 @@ export function SkillSection() {
           <div>
             <div className="max-w-2xl">
               <p className="text-[11px] font-bold uppercase tracking-[0.18em] text-tealBrand-600">
-                Çalışma Notları
+                {t("skills.notesEyebrow")}
               </p>
               <h4 className="mt-4 font-serif text-3xl leading-tight text-mist-50 md:text-4xl">
-                Nasıl çalıştığımı anlatan küçük detaylar
+                {t("skills.notesTitle")}
               </h4>
             </div>
 

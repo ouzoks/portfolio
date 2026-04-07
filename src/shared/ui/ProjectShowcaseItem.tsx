@@ -1,3 +1,4 @@
+import { useI18n } from "../i18n/I18nProvider";
 import type { Project } from "../types";
 import { PhotoPlaceholder } from "./PhotoPlaceholder";
 import { ProjectDetailsTabs } from "./ProjectDetailsTabs";
@@ -33,6 +34,7 @@ function ProjectActionLink({
 
 export function ProjectShowcaseItem({ project, align }: ProjectShowcaseItemProps) {
   const isImageRight = align === "right";
+  const { t } = useI18n();
 
   return (
     <article className="grid gap-8 border-t border-tealBrand-500/18 pt-8 lg:grid-cols-2 lg:items-center lg:gap-12">
@@ -65,9 +67,9 @@ export function ProjectShowcaseItem({ project, align }: ProjectShowcaseItemProps
         <ProjectDetailsTabs project={project} />
 
         <div className="mt-8 flex flex-wrap gap-3">
-          <ProjectActionLink href={project.repoUrl} label="GitHub Repo" />
+          <ProjectActionLink href={project.repoUrl} label={t("projects.repo")} />
           {project.liveDemoUrl ? (
-            <ProjectActionLink href={project.liveDemoUrl} label="Live Demo" variant="primary" />
+            <ProjectActionLink href={project.liveDemoUrl} label={t("projects.liveDemo")} variant="primary" />
           ) : null}
         </div>
       </div>

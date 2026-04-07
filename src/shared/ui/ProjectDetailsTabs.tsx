@@ -1,5 +1,6 @@
 import { useLayoutEffect, useRef, useState } from "react";
 import { FaArrowRight } from "react-icons/fa";
+import { useI18n } from "../i18n/I18nProvider";
 import type { Project } from "../types";
 import { SkillTag } from "./SkillTag";
 
@@ -14,6 +15,7 @@ export function ProjectDetailsTabs({ project }: ProjectDetailsTabsProps) {
   const [contentHeight, setContentHeight] = useState(0);
   const overviewMeasureRef = useRef<HTMLDivElement>(null);
   const implementationMeasureRef = useRef<HTMLDivElement>(null);
+  const { t } = useI18n();
   const implementationSummary = `${project.implementation.architecture}`;
 
   useLayoutEffect(() => {
@@ -95,7 +97,7 @@ export function ProjectDetailsTabs({ project }: ProjectDetailsTabsProps) {
                   : "text-mist-300 hover:text-tealBrand-500"
               }`}
             >
-              Genel Bakış
+              {t("projects.overview")}
             </button>
             <button
               type="button"
@@ -106,7 +108,7 @@ export function ProjectDetailsTabs({ project }: ProjectDetailsTabsProps) {
                   : "text-mist-300 hover:text-tealBrand-500"
               }`}
             >
-              Uygulama
+              {t("projects.implementation")}
             </button>
           </div>
         </div>

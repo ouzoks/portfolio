@@ -1,14 +1,18 @@
-import { experiences } from "../../shared/config/site";
+import { useI18n } from "../../shared/i18n/I18nProvider";
+import { getExperiences } from "../../shared/config/site";
 import { ExperienceTimelineItem } from "../../shared/ui/ExperienceTimelineItem";
 import { Reveal } from "../../shared/ui/Reveal";
 
 export function ExperiencesSection() {
+  const { dictionary, t } = useI18n();
+  const experiences = getExperiences(dictionary);
+
   return (
     <section id="experience" className="shell py-20">
       <Reveal>
-        <p className="section-eyebrow">DENEYİM</p>
+        <p className="section-eyebrow">{t("experiences.eyebrow")}</p>
         <div className="mx-auto max-w-3xl text-center">
-          <h2 className="section-title">Çalışma yolculuğum</h2>
+          <h2 className="section-title">{t("experiences.title")}</h2>
         </div>
       </Reveal>
 

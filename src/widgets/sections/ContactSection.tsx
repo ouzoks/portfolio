@@ -1,11 +1,13 @@
 import { useEffect, useRef, useState } from "react";
 import { FaGithub, FaLinkedinIn } from "react-icons/fa";
+import { useI18n } from "../../shared/i18n/I18nProvider";
 import { Reveal } from "../../shared/ui/Reveal";
 
 const clamp = (value: number, min: number, max: number) => Math.min(Math.max(value, min), max);
 
 export function ContactSection() {
   const sectionRef = useRef<HTMLElement | null>(null);
+  const { t } = useI18n();
   const [motion, setMotion] = useState({
     scaleX: 0.72,
     scaleY: 0.58,
@@ -82,7 +84,7 @@ export function ContactSection() {
           </div>
 
           <p className="mx-auto mt-8 max-w-2xl text-center text-sm leading-7 text-mist-300 md:text-base">
-           Yeni ürünler geliştirmek, mevcut arayüzleri iyileştirmek ve kullanıcı deneyimini ileri taşımak için frontend odaklı projelerde birlikte çalışabiliriz.
+            {t("contact.description")}
           </p>
         </Reveal>
 
@@ -95,7 +97,7 @@ export function ContactSection() {
               letterSpacing: `${motion.letterSpacing}em`,
             }}
           >
-            İLETİŞİM
+            {t("contact.title")}
           </h2>
         </Reveal>
       </div>

@@ -8,15 +8,18 @@ export type StatItem = {
   label: string;
 };
 
-export type Project = {
-  number?: string;
-  title: string;
-  summary: string;
+export type ProjectMeta = {
   technologies: AboutCapabilityTag[];
   repoUrl: string;
   liveDemoUrl?: string;
-  imageLabel: string;
   imageSrc?: string;
+};
+
+export type ProjectContent = {
+  number?: string;
+  title: string;
+  summary: string;
+  imageLabel: string;
   overview: {
     problem: string;
     solution: string;
@@ -25,6 +28,8 @@ export type Project = {
     architecture: string;
   };
 };
+
+export type Project = ProjectContent & ProjectMeta;
 
 export type AboutCapabilityTag = {
   icon:
@@ -91,9 +96,14 @@ export type Experience = {
   description: string;
 };
 
-export type Education = {
+export type EducationMeta = {
+  logoSrc?: string;
+};
+
+export type EducationContent = {
   school: string;
   period: string;
   degree: string;
-  logoSrc?: string;
 };
+
+export type Education = EducationContent & EducationMeta;

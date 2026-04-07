@@ -1,7 +1,11 @@
+import { useI18n } from "../../shared/i18n/I18nProvider";
+
 export function Footer() {
+  const { t } = useI18n();
+
   return (
     <footer className="shell border-t border-white/12 py-6 text-sm text-mist-300">
-      © 2026 Oğuz. Tüm hakları saklıdır.
+      {t("footer.copyright")}
     </footer>
   );
 }
