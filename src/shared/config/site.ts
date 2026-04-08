@@ -26,7 +26,7 @@ const projectMeta: ProjectMeta[] = [
     imageSrc: rusturkproject,
     repoUrl: "",
     repoPrivate: true,
-    liveDemoUrl: "https://portfolio-cms-demo.example.com",
+    liveDemoUrl: "https://victorious-pond-03f632003.2.azurestaticapps.net/#/",
     technologies: [
       { icon: "react", label: "React" },
       { icon: "materialui", label: "Material UI" },
