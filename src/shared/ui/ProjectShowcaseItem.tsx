@@ -12,10 +12,12 @@ function ProjectActionLink({
   href,
   label,
   variant = "secondary",
+  disabled = false,
 }: {
   href: string;
   label: string;
   variant?: "primary" | "secondary";
+  disabled?: boolean;
 }) {
   const baseClassName =
     "inline-flex items-center justify-center rounded-full px-5 py-3 text-sm font-bold transition duration-200";
@@ -24,6 +26,17 @@ function ProjectActionLink({
     variant === "primary"
       ? "bg-tealBrand-500 text-night-950 shadow-soft hover:-translate-y-0.5 hover:bg-tealBrand-600 hover:text-night-950"
       : "border border-white/10 bg-white/5 text-mist-100 backdrop-blur-sm hover:-translate-y-0.5 hover:border-tealBrand-500/45 hover:text-tealBrand-500";
+
+  if (disabled) {
+    return (
+      <span
+        aria-disabled="true"
+        className={`${baseClassName} cursor-not-allowed border border-white/8 bg-white/[0.03] text-mist-300/70 backdrop-blur-sm`}
+      >
+        {label}
+      </span>
+    );
+  }
 
   return (
     <a href={href} target="_blank" rel="noreferrer" className={`${baseClassName} ${variantClassName}`}>
@@ -67,7 +80,11 @@ export function ProjectShowcaseItem({ project, align }: ProjectShowcaseItemProps
         <ProjectDetailsTabs project={project} />
 
         <div className="mt-8 flex flex-wrap gap-3">
-          <ProjectActionLink href={project.repoUrl} label={t("projects.repo")} />
+          <ProjectActionLink
+            href={project.repoUrl}
+            label={project.repoPrivate ? t("projects.repoPrivate") : t("projects.repo")}
+            disabled={project.repoPrivate}
+          />
           {project.liveDemoUrl ? (
             <ProjectActionLink href={project.liveDemoUrl} label={t("projects.liveDemo")} variant="primary" />
           ) : null}

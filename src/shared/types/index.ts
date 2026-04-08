@@ -11,6 +11,7 @@ export type StatItem = {
 export type ProjectMeta = {
   technologies: AboutCapabilityTag[];
   repoUrl: string;
+  repoPrivate?: boolean;
   liveDemoUrl?: string;
   imageSrc?: string;
 };

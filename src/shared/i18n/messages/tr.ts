@@ -16,11 +16,11 @@ export const tr: Messages = {
     openProfile: "Profil detaylarını aç",
     location: "İstanbul, Türkiye",
     role: "Junıor Software Engıneer",
-    intro: "Merhaba, web siteme hoş geldiniz.",
+    intro: "Merhaba, web siteme **hoş geldiniz**.",
     summary:
-      "Kısaca yaptığım işi anlatacak olursam, karmaşık fikirleri daha sade ve anlaşılır çıktılara dönüştürür, kullanıcı senaryolarını uygulanabilir hale getiririm.",
+      "Kısaca yaptığım işi anlatacak olursam, **karmaşık fikirleri** daha sade ve anlaşılır çıktılara dönüştürür, kullanıcı senaryolarını **uygulanabilir** hale getiririm.",
     purpose:
-      "Amacım, kullanıcıların akışta kaybolmadan ilerleyebileceği, iyi düşünülmüş ve sürdürülebilir arayüzler ve fonksiyonlar oluşturmaktır.",
+      "Amacım, kullanıcıların akışta kaybolmadan ilerleyebileceği, **iyi düşünülmüş** ve **sürdürülebilir** arayüzler ve fonksiyonlar oluşturmaktır.",
   },
   about: {
     eyebrow: "NE YAPIYORUM",
@@ -41,6 +41,7 @@ export const tr: Messages = {
     eyebrow: "ÖNE ÇIKAN PROJELER",
     title: "Seçili projeler",
     repo: "GitHub Repo",
+    repoPrivate: "GitHub Repo (Private)",
     liveDemo: "Canlı Demo",
     overview: "Genel Bakış",
     implementation: "Uygulama",

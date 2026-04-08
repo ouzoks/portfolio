@@ -42,6 +42,7 @@ export type Messages = {
     eyebrow: string;
     title: string;
     repo: string;
+    repoPrivate: string;
     liveDemo: string;
     overview: string;
     implementation: string;

@@ -24,7 +24,8 @@ const cloneTags = (tags: readonly AboutCapabilityTag[]): AboutCapabilityTag[] =>
 const projectMeta: ProjectMeta[] = [
   {
     imageSrc: rusturkproject,
-    repoUrl: "https://github.com/your-username/portfolio-cms-dashboard",
+    repoUrl: "",
+    repoPrivate: true,
     liveDemoUrl: "https://portfolio-cms-demo.example.com",
     technologies: [
       { icon: "react", label: "React" },

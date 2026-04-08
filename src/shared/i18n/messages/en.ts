@@ -16,11 +16,11 @@ export const en = {
     openProfile: "Open profile details",
     location: "Istanbul, Turkey",
     role: "Junior Software Engineer",
-    intro: "Hello, welcome to my website.",
+    intro: "Hello, **welcome** to my website.",
     summary:
-      "If I were to briefly describe what I do, I turn complex ideas into clearer outcomes and make user scenarios practical and usable.",
+      "If I were to briefly describe what I do, I turn **complex ideas** into clearer outcomes and make user scenarios **practical** and usable.",
     purpose:
-      "My goal is to build thoughtful and sustainable interfaces and features that help users move through a flow without getting lost.",
+      "My goal is to build **thoughtful** and **sustainable** interfaces and features that help users move through a flow without getting lost.",
   },
   about: {
     eyebrow: "WHAT I DO",
@@ -41,6 +41,7 @@ export const en = {
     eyebrow: "FEATURED PROJECTS",
     title: "Selected projects",
     repo: "GitHub Repo",
+    repoPrivate: "GitHub Repo (Private)",
     liveDemo: "Live Demo",
     overview: "Overview",
     implementation: "Implementation",

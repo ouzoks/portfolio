@@ -4,6 +4,22 @@ import profilePicture from "../../shared/assets/profile-picture.png";
 import { PhotoPlaceholder } from "../../shared/ui/PhotoPlaceholder";
 import { Reveal } from "../../shared/ui/Reveal";
 
+function renderHighlightedText(text: string) {
+  return text.split(/(\*\*.*?\*\*)/g).map((part, index) => {
+    const isHighlighted = part.startsWith("**") && part.endsWith("**");
+
+    if (!isHighlighted) {
+      return <span key={index}>{part}</span>;
+    }
+
+    return (
+      <strong key={index} className="font-semibold text-tealBrand-500">
+        {part.slice(2, -2)}
+      </strong>
+    );
+  });
+}
+
 export function HeroSection() {
   const [showBioCard, setShowBioCard] = useState(false);
   const { t } = useI18n();
@@ -53,13 +69,13 @@ export function HeroSection() {
           }`}
         >
           <p className="leading-relaxed text-lg text-mist-300">
-            {t("hero.intro")}
+            {renderHighlightedText(t("hero.intro"))}
             <br />
             <br />
-            {t("hero.summary")}
+            {renderHighlightedText(t("hero.summary"))}
             <br />
             <br />
-            {t("hero.purpose")}
+            {renderHighlightedText(t("hero.purpose"))}
           </p>
         </article>
       </div>
