@@ -1,17 +1,17 @@
 # Oğuz Öksüzömer | Portfolio
 
-Kişisel portfolyo web sitem. Bu proje; projelerimi, deneyimlerimi, teknik yetkinliklerimi ve çalışma yaklaşımımı modern, performans odaklı ve çok dilli bir arayüz ile sunmak için geliştirildi.
+My personal portfolio website. This project was built to showcase my projects, experience, technical skills, and working approach through a modern, performance-oriented, and multilingual interface.
 
-## Özellikler
+## Features
 
-- React + TypeScript + Vite tabanlı modern yapı
-- Tailwind CSS ile responsive ve ölçeklenebilir UI
-- Türkçe / İngilizce dil desteği
-- Bölüm bazlı animasyonlar ve reveal geçişleri
-- Proje vitrin alanı, deneyim zaman çizelgesi ve iletişim bölümü
-- Dark + mint accent temalı özel tasarım
+- Modern architecture built with React + TypeScript + Vite
+- Responsive and scalable UI with Tailwind CSS
+- Turkish / English language support
+- Section-based animations and reveal transitions
+- Project showcase, experience timeline, and contact section
+- Custom dark + mint accent theme
 
-## Teknolojiler
+## Technologies
 
 - React
 - TypeScript
@@ -22,7 +22,7 @@ Kişisel portfolyo web sitem. Bu proje; projelerimi, deneyimlerimi, teknik yetki
 - clsx
 - tailwind-merge
 
-## Proje Yapısı
+## Project Structure
 
 ```bash
 src/
