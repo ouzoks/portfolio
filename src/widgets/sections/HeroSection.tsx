@@ -22,8 +22,9 @@ function renderHighlightedText(text: string) {
 
 export function HeroSection() {
   const [showBioCard, setShowBioCard] = useState(false);
-  const { t } = useI18n();
+  const { t, locale } = useI18n();
   const text = t("hero.name");
+  const downloadCvLabel = locale === "tr" ? "CV İndir" : "Download CV";
 
   return (
     <section id="home" className="relative flex min-h-screen items-center justify-center overflow-hidden">
@@ -78,6 +79,18 @@ export function HeroSection() {
             {renderHighlightedText(t("hero.purpose"))}
           </p>
         </article>
+      </div>
+
+      <div className="absolute bottom-20 left-1/2 z-10 -translate-x-1/2 md:bottom-24">
+        <Reveal delayMs={560} yOffset={14}>
+          <a
+            href="/cv/Oguz_Oksuzomer_Junior_Frontend_Fullstack_CV.pdf"
+            download="Oguz_Oksuzomer_Junior_Frontend_Fullstack_CV.pdf"
+            className="inline-flex items-center rounded-full border border-white/12 bg-white/6 px-4 py-2 text-sm font-semibold tracking-[0.04em] text-mist-100/72 backdrop-blur-sm transition duration-300 hover:-translate-y-0.5 hover:border-tealBrand-400/40 hover:bg-white/9 hover:text-mist-50 hover:shadow-[0_12px_28px_-14px_rgba(99,245,198,0.45)]"
+          >
+            {downloadCvLabel}
+          </a>
+        </Reveal>
       </div>
 
       <Reveal className="absolute bottom-6 left-5 z-10" delayMs={420} yOffset={16}>
