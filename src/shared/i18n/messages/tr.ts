@@ -241,6 +241,14 @@ export const tr: Messages = {
           "Linux sistemleri üzerinde RHEL ve CentOS yönetimi, temel güvenlik yapılandırmaları ve sunucu operasyonlarıyla ilgilendim. Aynı zamanda PHP Laravel ile MVC mimarisinde uygulama geliştirme, 2FA, rol bazlı yetkilendirme ve güvenlik modülleri üzerinde çalıştım.",
       },
       {
+        period: "Nisan 2026 - Haziran 2026",
+        role: "Fullstack Geliştirici",
+        company: "LegiFix",
+        employmentType: "Yarı zamanlı",
+        description:
+          "LegiFix'te mevcut kod tabanını refactor ederek daha modüler, sürdürülebilir ve ölçeklenebilir bir mimariye katkı sağladım. Kullanıcıların karşılaşabileceği tüm senaryoları analiz ederek akışları optimize ettim. Senaryo sonuçlarını link registry yapılarıyla ilişkilendirerek sistemin tutarlılığını ve bakım kolaylığını artırdım.",
+      },
+      {
         period: "2026 - Bugün",
         role: "Freelance Frontend Developer",
         company: "Bağımsız Çalışma",

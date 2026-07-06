@@ -240,6 +240,14 @@ export const en = {
         description:
           "I worked with Linux systems including RHEL and CentOS administration, basic security configurations, and server operations. At the same time, I worked on PHP Laravel applications in MVC architecture, along with 2FA, role-based authorization, and security modules.",
       },
+            {
+        period: "April 2026 - June 2026",
+        role: "Fullstack Developer",
+        company: "LegiFix",
+        employmentType: "Part-time",
+        description:
+          "Contributed to refactoring the existing codebase into a more modular, maintainable, and scalable architecture. Analyzed and optimized all possible user journeys within the application. Linked every scenario outcome through link registry structures to improve consistency and maintainability.",
+      },
       {
         period: "2026 - Present",
         role: "Freelance Frontend Developer",
