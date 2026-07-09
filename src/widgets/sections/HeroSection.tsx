@@ -84,8 +84,8 @@ export function HeroSection() {
       <div className="absolute bottom-20 left-1/2 z-10 -translate-x-1/2 md:bottom-24">
         <Reveal delayMs={560} yOffset={14}>
           <a
-            href="/cv/Oguz_Oksuzomer_Junior_Frontend_Fullstack_CV.pdf"
-            download="Oguz_Oksuzomer_Junior_Frontend_Fullstack_CV.pdf"
+            href="/cv/Oguz_Oksuzomer_Frontend_Fullstack_CV.pdf"
+            download="Oguz_Oksuzomer_Frontend_Fullstack_CV.pdf"
             className="inline-flex items-center rounded-full border border-white/12 bg-white/6 px-4 py-2 text-sm font-semibold tracking-[0.04em] text-mist-100/72 backdrop-blur-sm transition duration-300 hover:-translate-y-0.5 hover:border-tealBrand-400/40 hover:bg-white/9 hover:text-mist-50 hover:shadow-[0_12px_28px_-14px_rgba(99,245,198,0.45)]"
           >
             {downloadCvLabel}
